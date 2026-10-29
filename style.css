@@ -34,3 +34,28 @@ img[alt="CPS Logo"] {
     width: 96.55px;
     height: 50.81px;
 }
+.main__header__box {
+    display: flex;
+    justify-content: flex-end;
+    width: 307px;
+    height: 40px;
+    border-left: 4px solid #41F6D7;
+    top: 112px;
+    opacity: 1;
+}
+@font-face {
+    font-family: "TT Lakes Neue Trial";
+    src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+.main__header--style {
+    position: absolute;
+    height: 40px;
+    font-family: 'TT Lakes Neue Trial';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;  
+}
