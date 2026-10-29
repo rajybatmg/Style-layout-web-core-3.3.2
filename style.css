@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.outer__container {
+    width: 320px;
+    height: 1722px;
+    background-color:#F8F8F8;
+}
+.navigation__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 88px;
+    width: 320px;
+}
+.vertical__line {
+    border-left: solid 2px;
+    height: 32px;
+    color: #EAEAEA;
+}
+img[alt="Main Menu Icon"],
+img[alt="CPS Repair Icon"],
+img[alt="CPS Status Icon"] {
+    width: 40px;
+    height: 40px;
+}
+img[alt="CPS Logo"] {
+    width: 96.55px;
+    height: 50.81px;
+}
