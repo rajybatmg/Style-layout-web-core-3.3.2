@@ -227,6 +227,7 @@ img[alt="CPS Logo"] {
     flex-direction: column;
     gap: 26px;
     position: relative;
+    flex-shrink: 0;
 }
 .light--text {
     color: #7E7E82;
