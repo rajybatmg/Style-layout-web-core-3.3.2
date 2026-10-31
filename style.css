@@ -261,3 +261,19 @@ img[alt="CPS Logo"] {
      overflow-x: auto;
      flex-wrap: nowrap;
  }
+ .arrow--pink {
+  color:#FF3E79;
+  margin-left: 30px; 
+ }
+ footer {
+  width: 320px;
+  height: 129px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+ }
+ footer > div {
+  text-align: center;
+ }
