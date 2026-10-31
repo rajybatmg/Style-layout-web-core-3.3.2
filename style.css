@@ -191,3 +191,72 @@ img[alt="CPS Logo"] {
   width: 40px;
   height: 40px;
 }
+.devices__inner__container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 240px;
+    height: 160px;
+    padding: 16px;
+    background-color: #EAEAEA;
+}
+.devices a {
+    text-decoration: none;
+    color: #1B1C21;
+}
+.flex--end {
+    align-self: flex-end;
+    margin-top: auto;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.devices__outer__container {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.price__box {
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    position: relative;
+}
+.light--text {
+    color: #7E7E82;
+}
+.price__box p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+.order__container{
+    width: 119px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FF3E79;
+    border-radius: 16px;
+    color: #FFFFFF;
+    align-items: center;
+    position: absolute;
+    width: 119px;
+    bottom: 20px;
+    right: 14px;
+} 
+ .services__outer__box {
+     display: flex;
+     width: 100%;
+     gap: 16px;
+     overflow-x: auto;
+     flex-wrap: nowrap;
+ }
