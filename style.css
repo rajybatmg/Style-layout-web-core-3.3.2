@@ -10,10 +10,11 @@ body {
 .outer__container {
   width: 320px;
   height: 1722px;
-  background-color: #f8f8f8;
+  background-color:#F8F8F8;
 }
 
 .navigation__container {
+  background-color: #FFFFFF;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -82,15 +83,24 @@ img[alt="CPS Logo"] {
 .services__container {
   display: flex;
   align-items: center;
-  gap: 16px;
-  width: 100%;
-  height: 40px;
+  margin-left: 16px;
+  gap: 10px;
   overflow-x: auto;
   flex-wrap: nowrap;
   margin-top: 17px;
   left: 16px;
   flex-shrink: 0;
 }
+.services {
+  height: 40px;
+  width: 246px;
+}
+.services__container .services {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .services:focus-within {
   border: 2px solid #b8ffec;
 }
@@ -164,7 +174,8 @@ img[alt="CPS Logo"] {
 .brands__inner__container {
   height: 72px;
   width: 240px;
-  background-color: #eaeaea;
+  background-color:#FFFFFF;
+;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -197,7 +208,8 @@ img[alt="CPS Logo"] {
     flex: 0 0 240px;
     height: 160px;
     padding: 16px;
-    background-color: #EAEAEA;
+    background-color:#FFFFFF;
+;
 }
 .devices a {
     text-decoration: none;
@@ -296,7 +308,6 @@ img[alt="CPS Logo"] {
     z-index: 1000;
 }
 
-/* Open sidebar when hamburger icon is clicked */
 .sidebar:target {
     transform: translateX(0);
     visibility: visible;
@@ -340,4 +351,12 @@ img[alt="CPS Logo"] {
   gap: 12px;
   width: 214px;
   margin-top: 32px;
+}
+.dark--text {
+  font-family: TT Lakes Neue Trial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
 }
