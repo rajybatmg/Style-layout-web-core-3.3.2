@@ -1,171 +1,193 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family:'TT Lakes Neue Trial';
+  font-family: "TT Lakes Neue Trial";
 }
 
 .outer__container {
-    width: 320px;
-    height: 1722px;
-    background-color:#F8F8F8;
+  width: 320px;
+  height: 1722px;
+  background-color: #f8f8f8;
 }
 
 .navigation__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 88px;
-    width: 320px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 88px;
+  width: 320px;
 }
 .vertical__line {
-    border-left: solid 2px;
-    height: 32px;
-    color: #EAEAEA;
+  border-left: solid 2px;
+  height: 32px;
+  color: #eaeaea;
 }
 img[alt="Main Menu Icon"],
 img[alt="CPS Repair Icon"],
 img[alt="CPS Status Icon"] {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 img[alt="CPS Logo"] {
-    width: 96.55px;
-    height: 50.81px;
+  width: 96.55px;
+  height: 50.81px;
 }
 .main__header__box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 307px;
-    height: 40px;
-    border-left: 4px solid #41F6D7;
-    border-radius: 0 4px 4px 0;
-    padding-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 307px;
+  height: 40px;
+  border-left: 4px solid #41f6d7;
+  border-radius: 0 4px 4px 0;
+  padding-left: 12px;
 }
 
 @font-face {
-    font-family: "TT Lakes Neue Trial";
-    src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "TT Lakes Neue Trial";
+  src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "TT Lakes Neue Trial";
-    src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "TT Lakes Neue Trial";
+  src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "TT Lakes Neue Trial";
-    src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "TT Lakes Neue Trial";
+  src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 .main__header--style {
-    position: absolute;
-    height: 40px;
-    font-family: 'TT Lakes Neue Trial';
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 40px;
-    letter-spacing: -0.6px;
-    color: #1B1C21;  
+  position: absolute;
+  height: 40px;
+  font-family: "TT Lakes Neue Trial";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
 }
-.services__container{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    height: 40px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    margin-top: 17px;
-    left: 16px;
-    flex-shrink: 0;
+.services__container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 40px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  margin-top: 17px;
+  left: 16px;
+  flex-shrink: 0;
 }
 .services:focus-within {
-    border: 2px solid #B8FFEC;
+  border: 2px solid #b8ffec;
 }
 .services {
-    flex-shrink: 0;
-} 
-.services a {
-    text-decoration: none;
-    color: #7E7E82;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-
+  flex-shrink: 0;
 }
-.text__box__outer__container{
-    width: 320px;
-    height: 322px;
-    margin-top: 40px;
-    position: absolute;
-    top: 240px;
+.services a {
+  text-decoration: none;
+  color: #7e7e82;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.text__box__outer__container {
+  width: 320px;
+  height: 322px;
+  margin-top: 40px;
+  position: absolute;
+  top: 240px;
 }
 .text__box {
-    width: 288px;
-    height: 72px;
-    margin: auto;
+  width: 288px;
+  height: 72px;
+  margin: auto;
 }
 .text__box p {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   font-style: normal;
-  color: #1B1C21;
+  color: #1b1c21;
 }
-.readmore__icon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    color: #41F6D7;
-    line-height:  9px;
+.readmore__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  color: #41f6d7;
+  line-height: 9px;
 }
-.readmore__box{
-    margin-left: 16px;
-    margin-top: 16px;
-    width: 112px;
-    height: 24px;
-    display: flex;
-    justify-content: space-between;
+.readmore__box {
+  margin-left: 16px;
+  margin-top: 16px;
+  width: 112px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .image img {
-   width: 320px;
-   height: 176px;
-   width: 320;
-   height: 176;
+  width: 320px;
+  height: 176px;
+  width: 320;
+  height: 176;
 }
 .repair__equipment__box {
-    padding: 16px;
+  padding: 16px;
 }
 .repair__brands__container p {
-    font-family: "TT Lakes Neue Trial", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    text-transform: uppercase;
-    color: #7E7E82;
-}
-.circle__box {
-    border: 2px solid #FF3E79;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
+  font-family: "TT Lakes Neue Trial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7e7e82;
 }
 .brands__inner__container {
-    display: flex;
-    justify-content: space-between;
+  height: 72px;
+  width: 240px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 240px;
+}
+.repair__brands__container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 14px;
+}
+.brands__image a img {
+  object-fit: contain;
+  height: 32px;
+  width: 108px;
+}
+.circle__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ff3e79;
+  color: #ff3e79;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
 }
