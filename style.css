@@ -607,17 +607,21 @@ img[alt="CPS Logo"] {
 .sidebar__languages {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+}
+
+.sidebar__languages input {
+  display: none;
+}
+
+.sidebar__languages label {
+  color: #1B1C21;
+  cursor: pointer;
   font-size: 16px;
 }
 
-.sidebar__language--active {
-  color: #ff3e79;
+.sidebar__languages input:checked + label {
+  color: #FF3E79;
 }
-.sidebar__languages:hover {
- cursor: pointer;
-}
-
 /* FOR BIGGER SCREEN */
 
 @media (min-width: 1120px) {
