@@ -1,17 +1,15 @@
-
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* FONTS */
 @font-face {
   font-family: "TT Lakes Neue Trial";
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf")
     format("truetype");
   font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -19,6 +17,7 @@
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Medium.ttf")
     format("truetype");
   font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
@@ -26,6 +25,7 @@
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Bold.ttf")
     format("truetype");
   font-weight: 700;
+  font-style: normal;
 }
 
 body {
@@ -33,35 +33,38 @@ body {
   color: #1b1c21;
 }
 
-/* MAIN PAGE */
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* MOBILE FIRST — 320px */
+
 .outer__container {
-  width: 100%;
-  max-width: 320px;
-  min-height: 1722px;
+  width: 320px;
+  height: 1722px;
+  min-height: 100vh;
   background-color: #f8f8f8;
-  position: relative;
-  padding-bottom: 129px;
 }
 
 /* HEADER */
-.navigation__container {
-  width: 100%;
-  height: 88px;
-  background-color: #ffffff;
 
+.navigation__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 88px;
+  width: 100%;
+  background-color: #ffffff;
 }
 
-.vertical__line {
-  border-left: 2px solid #eaeaea;
-  height: 32px;
-}
-
-img[alt="Main Menu Icon"],
-img[alt="CPS Repair Icon"],
-img[alt="CPS Status Icon"] {
+.navigation__container img[alt="Main Menu Icon"],
+.navigation__container img[alt="CPS Repair Icon"],
+.navigation__container img[alt="CPS Status Icon"] {
   width: 40px;
   height: 40px;
 }
@@ -72,80 +75,92 @@ img[alt="CPS Logo"] {
   object-fit: contain;
 }
 
-/* MAIN HEADING */
+.vertical__line {
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+}
+
+.desktop__actions {
+  display: none;
+}
+
+/* TITLE */
+
 .main__header__box {
   display: flex;
   align-items: center;
-
   width: 100%;
-  height: 40px;
-
+  min-height: 40px;
+  margin-top: 24px;
+  padding-left: 12px;
   border-left: 4px solid #41f6d7;
   border-radius: 0 4px 4px 0;
-  padding-left: 12px;
-  margin-top: 24px;
 }
 
 .main__header--style {
-  font-weight: 700;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
-  white-space: nowrap;
+  font-weight: 700;
 }
 
-/* SERVICES MENU */
+/* SERVICES TABS */
+
 .services__container {
   display: flex;
   align-items: center;
-
   width: 100%;
   height: 40px;
   gap: 10px;
-
-  padding-left: 16px;
-  overflow-x: auto;
   margin-top: 24px;
-
+  padding: 0 16px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
   scrollbar-width: none;
+}
+
+.services__container::-webkit-scrollbar {
+  display: none;
 }
 
 .services {
   display: flex;
   align-items: center;
-
   flex: 0 0 246px;
   height: 40px;
-
-  padding: 0 10px;
+  padding: 0 12px;
   border: 2px solid transparent;
   border-radius: 6px;
 }
 
-.services:first-child {
+.services:first-child,
+.services:focus-within {
   border-color: #b8ffec;
   background-color: #ffffff;
 }
 
-.services:focus-within {
-  border-color: #b8ffec;
-}
-
 .services a {
+  text-decoration: none;
   color: #7e7e82;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.2px;
-
   white-space: nowrap;
-  text-decoration: none;
 }
 
-/* DESCRIPTION */
-.text__box__outer {
-  width: 100%;
+/* INTRODUCTION */
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
   margin-top: 24px;
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
 }
 
 .text__box {
@@ -153,52 +168,52 @@ img[alt="CPS Logo"] {
   margin: 0 auto;
 }
 
-.text__box p,
-.dark--text {
+.text__box p {
   font-size: 14px;
-  font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.2px;
 }
 
+.intro__extra {
+  display: none;
+}
+
 /* READ MORE */
+
 .readmore__box {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  
   gap: 8px;
-
-  width: 120px;
-  height: 24px;
-
   margin: 16px 0 16px 16px;
-
+  min-height: 24px;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
 }
 
 .readmore__icon {
-  width: 24px;
-  height: 24px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  line-height: 9px;
+  width: 24px;
+  height: 24px;
   color: #41f6d7;
+  line-height: 9px;
+  padding-bottom: 5px;
 }
 
-/* MAIN IMAGE */
 .image img {
-  width: 100%;
-  height: 176px;
   display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 320 / 176;
   object-fit: cover;
 }
 
-/* SECTION HEADINGS */
+/* SHARED SECTION STYLING */
+
 .brands__section,
 .devices__section,
 .prices__section {
@@ -206,42 +221,41 @@ img[alt="CPS Logo"] {
   border-top: 1px solid #d9fff5;
 }
 
-.brands__section > p,
-.devices__section > p,
-.prices__section > p {
-  min-height: 64px;
-  padding: 16px;
-
+.section__title {
   display: flex;
   align-items: center;
+  min-height: 64px;
+  padding: 16px;
 
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #7e7e82;
   text-transform: uppercase;
+  color: #7e7e82;
 
-  background: linear-gradient(to right, #f8f8f8, #ffffff);
+  background: linear-gradient(
+    to right,
+    #f8f8f8,
+    #ffffff
+  );
 }
 
 /* HORIZONTAL SCROLLING */
+
 .repair__brands__container,
 .devices__outer__container,
 .services__outer__box {
   display: flex;
   flex-wrap: nowrap;
-
-  width: 100%;
   gap: 16px;
-  overflow-x: auto;
+  width: 100%;
   padding: 0 16px;
-
-  scrollbar-width: none;
+  overflow-x: auto;
   scroll-snap-type: x proximity;
+  scrollbar-width: none;
 }
 
-.services__container::-webkit-scrollbar,
 .repair__brands__container::-webkit-scrollbar,
 .devices__outer__container::-webkit-scrollbar,
 .services__outer__box::-webkit-scrollbar {
@@ -249,60 +263,70 @@ img[alt="CPS Logo"] {
 }
 
 /* BRAND CARDS */
+
 .brands__inner__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   flex: 0 0 240px;
   height: 72px;
+  min-width: 0;
   padding: 0 16px;
 
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 6px;
-
   scroll-snap-align: start;
 }
 
-.brands__image a img {
-  width: 108px;
-  height: 32px;
-  object-fit: contain;
-  display: block;
+.brands__image {
+  min-width: 0;
 }
 
-/* PINK ARROWS */
+.brands__image img {
+  display: block;
+  width: 108px;
+  max-width: 100%;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* PINK ARROW */
+
 .circle__box {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
 
   border: 2px solid #ff3e79;
   border-radius: 50%;
   color: #ff3e79;
+  background-color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 1;
 }
 
-/* PAGINATION DOTS */
+/* PAGINATION */
+
 .pagination {
   display: flex;
-  justify-content: center;
   align-items: center;
-
+  justify-content: center;
   gap: 8px;
   height: 36px;
-  margin: 4px 0 0;
+  margin-top: 4px;
 }
 
 .pagination__dot {
   width: 12px;
   height: 12px;
   flex-shrink: 0;
-
   border-radius: 50%;
   background-color: #dddddd;
 }
@@ -311,34 +335,46 @@ img[alt="CPS Logo"] {
   background-color: #b5b6bc;
 }
 
+/* SHOW ALL */
+
+.showall__box {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
 /* DEVICE CARDS */
+
 .devices__inner__container {
   display: flex;
   flex-direction: column;
 
   flex: 0 0 240px;
   height: 160px;
+  min-width: 0;
   padding: 16px;
 
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 6px;
-
   scroll-snap-align: start;
 }
 
-.devices a {
-  text-decoration: none;
-  color: #1b1c21;
+.devices__name {
   font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
 }
 
 .flex--end {
-  margin-top: auto;
   align-self: flex-end;
+  margin-top: auto;
 }
 
-/* PRICE CARDS */
+/*SERVICE PRICES — MOBILE */
+.price__table__header {
+  display: none;
+}
+
 .price__box {
   display: flex;
   flex-direction: column;
@@ -347,18 +383,18 @@ img[alt="CPS Logo"] {
   position: relative;
   flex: 0 0 260px;
 
+  width: 260px;
   height: 200px;
   padding: 16px;
 
-  border-radius: 6px;
   background-color: #ffffff;
-
+  border-radius: 6px;
   scroll-snap-align: start;
 }
 
 .price__box p {
-  font-weight: 400;
   font-size: 14px;
+  font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.2px;
 }
@@ -369,8 +405,8 @@ img[alt="CPS Logo"] {
 
 .order__container {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
 
   position: absolute;
   bottom: 16px;
@@ -379,15 +415,19 @@ img[alt="CPS Logo"] {
   width: 119px;
   height: 32px;
 
-  border-radius: 16px;
   background-color: #ff3e79;
-
+  border-radius: 16px;
   color: #ffffff;
   font-size: 14px;
+  text-decoration: none;
 }
 
-/* PROPOSAL */
+/* COMMERCIAL PROPOSAL */
+
 .proposal__section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   padding: 16px 16px 32px;
 }
 
@@ -399,16 +439,14 @@ img[alt="CPS Logo"] {
 
 .proposal__link {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 12px;
-
   width: 220px;
-  margin-top: 40px;
 
-  color: #1b1c21;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 24px;
+  color: #1b1c21;
   text-decoration: none;
 }
 
@@ -417,25 +455,22 @@ img[alt="CPS Logo"] {
 }
 
 .arrow--pink {
+  font-size: 24px;
   color: #ff3e79;
-  font-size: 22px;
 }
 
-/* FOOTER */
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+/*FOOTER — MOBILE */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 
   width: 100%;
   min-height: 129px;
   padding: 16px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
 
   border-top: 1px solid #d9fff5;
 
@@ -443,33 +478,40 @@ footer {
   line-height: 18px;
 }
 
-footer > div {
+.footer > div {
   text-align: center;
 }
 
-/* SIDEBAR */
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SIDEBAR — CSS ONLY*/
+
 .sidebar {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-
-  width: 320px;
-  max-width: 100%;
-  min-height: 676px;
-  height: 100dvh;
-
-  padding: 24px 16px;
-  overflow-y: auto;
-
   display: flex;
   flex-direction: column;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  width: 320px;
+  max-width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding: 24px 16px;
+
   background-color: #ffffff;
+  overflow-y: auto;
 
   visibility: hidden;
   transform: translateX(-100%);
-  transition: transform 0.3s ease, visibility 0.3s;
+  transition:
+    transform 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .sidebar:target {
@@ -477,7 +519,6 @@ footer > div {
   transform: translateX(0);
 }
 
-/* SIDEBAR HEADER */
 .sidebar__header {
   display: flex;
   align-items: center;
@@ -488,24 +529,24 @@ footer > div {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 40px;
   height: 40px;
 
   border-radius: 50%;
   background-color: #ff3e79;
-  color: #ffffff;
-
-  font-size: 24px;
+  color: white;
   text-decoration: none;
+  font-size: 24px;
 }
 
-.sidebar__search {
+.sidebar__search img {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
-/* SIDEBAR NAVIGATION */
+/* SIDEBAR LINKS */
+
 .sidebar__navigation {
   display: flex;
   flex-direction: column;
@@ -514,32 +555,38 @@ footer > div {
 }
 
 .sidebar__navigation a {
-  text-decoration: none;
-  color: #1b1c21;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
+  color: #1b1c21;
+  text-decoration: none;
 }
 
-.sidebar__navigation a:first-child {
+.sidebar__link--active {
+  color: #7e7e82 !important;
   border-left: 4px solid #41f6d7;
-  margin-left: -16px;
   padding-left: 12px;
-  color: #7e7e82;
+  margin-left: -16px;
 }
 
-/* CONTACT ICONS */
+/* CONTACT DETAILS */
+
+.sidebar__contact {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
 .chats__container {
   display: flex;
   gap: 12px;
-  margin-top: 32px;
 }
 
 .chats__container img {
+  display: block;
   width: 40px;
   height: 40px;
 }
 
-/* SIDEBAR CONTACT DETAILS */
 .sidebar__bottom {
   display: flex;
   flex-direction: column;
@@ -547,7 +594,392 @@ footer > div {
   margin-top: 16px;
 }
 
-.sidebar__bottom p:nth-child(2) {
+.sidebar__bottom a {
+  color: #1b1c21;
+  text-decoration: none;
+}
+
+.sidebar__phone {
   font-size: 24px;
   font-weight: 700;
+}
+
+.sidebar__languages {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.sidebar__language--active {
+  color: #ff3e79;
+}
+.sidebar__languages:hover {
+ cursor: pointer;
+}
+
+/* FOR BIGGER SCREEN */
+
+@media (min-width: 1120px) {
+
+  /* SIDEBAR */
+
+  .sidebar {
+    width: 306px;
+    height: 881.78;
+    min-height: 0;
+    max-width: none;
+
+    padding: 24px 20px;
+
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .sidebar__close {
+    display: none;
+  }
+
+  .sidebar__navigation {
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .sidebar__link--active {
+    margin-left: -20px;
+    padding-left: 16px;
+  }
+
+  /* MAIN CONTENT */
+
+  .outer__container {
+    width: calc(100% - 306px);
+    margin-left: 306px;
+    min-height: 100vh;
+  }
+
+  .mobile__header {
+    display: none;
+  }
+
+  /* DESKTOP TITLE AND ACTIONS */
+
+  .main__header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    min-height: 56px;
+    margin-top: 24px;
+    padding: 0 24px;
+
+    border-left: 4px solid #41f6d7;
+  }
+
+  .main__header--style {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+
+  .desktop__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  .desktop__actions a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .desktop__actions img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* HORIZONTAL SERVICES MENU */
+
+  .services__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    height: auto;
+    min-height: 40px;
+
+    padding: 0 24px;
+    margin: 8px 0 24px;
+    gap: 8px;
+
+    overflow-x: visible;
+  }
+
+  .services {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .services a {
+    font-size: 14px;
+  }
+
+  /* INTRO SECTION */
+
+  .intro__container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 24px;
+
+    margin-top: 0;
+    padding: 0 24px 32px;
+  }
+
+  .intro__text {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .text__box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .text__box p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .intro__extra {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .intro__text .readmore__box {
+    margin: 24px 0 0;
+  }
+
+  .intro__container .image {
+    flex: 0 0 48%;
+    min-width: 0;
+  }
+
+  .intro__container .image img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+  /* SECTION HEADINGS */
+
+  .section__title {
+    padding: 16px 24px;
+  }
+
+  /* BRAND CARDS: 4 PER ROW */
+
+  .repair__brands__container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 16px;
+    padding: 0 24px;
+  }
+
+  .brands__inner__container {
+    flex: 0 0 calc((100% - 48px) / 4);
+    min-width: 0;
+    height: 72px;
+    padding: 0 10px;
+  }
+
+  .brands__image {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .brands__image img {
+    width: 90px;
+    max-width: 100%;
+    height: 32px;
+  }
+
+  .brands__inner__container .circle__box {
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+  }
+
+  /* DEVICES: 4 PER ROW */
+
+  .devices__outer__container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    gap: 16px;
+    padding: 0 24px;
+  }
+
+  .devices__inner__container {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 160px;
+  }
+
+  .devices__inner__container .circle__box {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* HIDE MOBILE PAGINATION */
+
+  .pagination {
+    display: none;
+  }
+
+  /* SHOW ALL BUTTONS */
+
+  .showall__box {
+    margin: 16px 0 24px 24px;
+  }
+
+  /* SERVICE PRICES TABLE LAYOUT */
+
+  .price__table__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 24px;
+    padding: 12px 16px;
+    color: #7e7e82;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .price__table__header span:nth-child(1) {
+    flex: 2 1 0;
+    min-width: 0;
+  }
+
+  .price__table__header span:nth-child(2),
+  .price__table__header span:nth-child(3) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .price__table__header span:nth-child(4) {
+    flex: 0 0 100px;
+  }
+
+  .services__outer__box {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 24px;
+    overflow: visible;
+  }
+
+  .price__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 64px;
+    height: auto;
+    padding: 12px 16px;
+    position: static;
+    background-color: #ffffff;
+    border-radius: 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .price__box > div:nth-child(1) {
+    flex: 2 1 0;
+    min-width: 0;
+  }
+
+  .price__box > div:nth-child(2),
+  .price__box > div:nth-child(3) {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .price__box .light--text {
+    display: none;
+  }
+
+  .price__box p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .price__box .order__container {
+    position: static;
+
+    flex: 0 0 100px;
+    width: 100px;
+    height: 32px;
+  }
+
+  /* PROPOSAL */
+
+  .proposal__section {
+    padding: 24px 24px 40px;
+    gap: 24px;
+  }
+
+  .proposal__section > p {
+    max-width: 480px;
+  }
+
+  .proposal__link {
+    width: auto;
+  }
+
+  .proposal__link span:first-child {
+    max-width: none;
+  }
+
+  /* FOOTER HORIZONTAL */
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+    min-height: 80px;
+    padding: 24px;
+  }
+
+  .footer > div {
+    flex: 1;
+  }
+
+  .footer > div:first-child {
+    text-align: left;
+  }
+
+  .footer > div:nth-child(2) {
+    text-align: center;
+  }
+
+  .footer > div:last-child {
+    text-align: right;
+  }
 }
