@@ -1,59 +1,17 @@
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "TT Lakes Neue Trial";
-}
 
-.outer__container {
-  width: 320px;
-  height: 1722px;
-  background-color:#F8F8F8;
-  position: relative;
-}
-
-.navigation__container {
-  background-color: #FFFFFF;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 88px;
-  width: 320px;
-}
-.vertical__line {
-  border-left: solid 2px;
-  height: 32px;
-  color: #eaeaea;
-}
-img[alt="Main Menu Icon"],
-img[alt="CPS Repair Icon"],
-img[alt="CPS Status Icon"] {
-  width: 40px;
-  height: 40px;
-}
-img[alt="CPS Logo"] {
-  width: 96.55px;
-  height: 50.81px;
-}
-.main__header__box {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 307px;
-  height: 40px;
-  border-left: 4px solid #41f6d7;
-  border-radius: 0 4px 4px 0;
-  padding-left: 12px;
-}
-
+/* FONTS */
 @font-face {
   font-family: "TT Lakes Neue Trial";
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf")
     format("truetype");
   font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -61,7 +19,6 @@ img[alt="CPS Logo"] {
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Medium.ttf")
     format("truetype");
   font-weight: 500;
-  font-style: normal;
 }
 
 @font-face {
@@ -69,326 +26,528 @@ img[alt="CPS Logo"] {
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Bold.ttf")
     format("truetype");
   font-weight: 700;
-  font-style: normal;
 }
-.main__header--style {
-  position: absolute;
+
+body {
+  font-family: "TT Lakes Neue Trial", sans-serif;
+  color: #1b1c21;
+}
+
+/* MAIN PAGE */
+.outer__container {
+  width: 100%;
+  max-width: 320px;
+  min-height: 1722px;
+  background-color: #f8f8f8;
+  position: relative;
+  padding-bottom: 129px;
+}
+
+/* HEADER */
+.navigation__container {
+  width: 100%;
+  height: 88px;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vertical__line {
+  border-left: 2px solid #eaeaea;
+  height: 32px;
+}
+
+img[alt="Main Menu Icon"],
+img[alt="CPS Repair Icon"],
+img[alt="CPS Status Icon"] {
+  width: 40px;
   height: 40px;
-  font-family: "TT Lakes Neue Trial";
-  font-weight: bold;
+}
+
+img[alt="CPS Logo"] {
+  width: 96.55px;
+  height: 50.81px;
+  object-fit: contain;
+}
+
+/* MAIN HEADING */
+.main__header__box {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 40px;
+
+  border-left: 4px solid #41f6d7;
+  border-radius: 0 4px 4px 0;
+  padding-left: 12px;
+  margin-top: 24px;
+}
+
+.main__header--style {
+  font-weight: 700;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
-  color: #1b1c21;
+  white-space: nowrap;
 }
+
+/* SERVICES MENU */
 .services__container {
   display: flex;
   align-items: center;
-  margin-left: 16px;
-  gap: 10px;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  margin-top: 17px;
-  left: 16px;
-  flex-shrink: 0;
-}
-.services {
+
+  width: 100%;
   height: 40px;
-  width: 246px;
+  gap: 10px;
+
+  padding-left: 16px;
+  overflow-x: auto;
+  margin-top: 24px;
+
+  scrollbar-width: none;
 }
-.services__container .services {
+
+.services {
   display: flex;
   align-items: center;
-  padding-left: 10px;
+
+  flex: 0 0 246px;
+  height: 40px;
+
+  padding: 0 10px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.services:first-child {
+  border-color: #b8ffec;
+  background-color: #ffffff;
 }
 
 .services:focus-within {
-  border: 2px solid #b8ffec;
+  border-color: #b8ffec;
 }
-.services {
-  flex-shrink: 0;
-}
+
 .services a {
-  text-decoration: none;
   color: #7e7e82;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}
-.text__box__outer {
-    width: 100%;
-    margin-top: 24px;
-    position: static;
-}
-.text__box {
-  width: 288px;
-  height: 72px;
-  margin: auto;
-}
-.text__box p {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-  font-style: normal;
-  color: #1b1c21;
-}
-.readmore__icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  color: #41f6d7;
-  line-height: 9px;
-}
-.readmore__box {
-  margin-left: 16px;
-  margin-top: 16px;
-  width: 112px;
-  height: 24px;
-  display: flex;
-  justify-content: space-between;
+
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-.image img {
-  width: 320px;
-  height: 176px;
-  width: 320;
-  height: 176;
+/* DESCRIPTION */
+.text__box__outer {
+  width: 100%;
+  margin-top: 24px;
 }
-.repair__equipment__box {
-  padding: 16px;
+
+.text__box {
+  width: calc(100% - 32px);
+  margin: 0 auto;
 }
-.repair__brands__container p {
-  font-family: "TT Lakes Neue Trial", sans-serif;
+
+.text__box p,
+.dark--text {
+  font-size: 14px;
   font-weight: 400;
-  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+/* READ MORE */
+.readmore__box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  width: 120px;
+  height: 24px;
+
+  margin: 16px 0 16px 16px;
+
   font-size: 16px;
+  font-weight: 500;
+}
+
+.readmore__icon {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 9px;
+  color: #41f6d7;
+}
+
+/* MAIN IMAGE */
+.image img {
+  width: 100%;
+  height: 176px;
+  display: block;
+  object-fit: cover;
+}
+
+/* SECTION HEADINGS */
+.brands__section,
+.devices__section,
+.prices__section {
+  width: 100%;
+  border-top: 1px solid #d9fff5;
+}
+
+.brands__section > p,
+.devices__section > p,
+.prices__section > p {
+  min-height: 64px;
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.2px;
-  text-transform: uppercase;
   color: #7e7e82;
+  text-transform: uppercase;
+
+  background: linear-gradient(to right, #f8f8f8, #ffffff);
 }
-.brands__inner__container {
-  height: 72px;
-  width: 240px;
-  background-color:#FFFFFF;
-;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex: 0 0 240px;
-}
-.repair__brands__container {
+
+/* HORIZONTAL SCROLLING */
+.repair__brands__container,
+.devices__outer__container,
+.services__outer__box {
   display: flex;
   flex-wrap: nowrap;
+
+  width: 100%;
+  gap: 16px;
   overflow-x: auto;
-  gap: 14px;
+  padding: 0 16px;
+
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
 }
+
+.services__container::-webkit-scrollbar,
+.repair__brands__container::-webkit-scrollbar,
+.devices__outer__container::-webkit-scrollbar,
+.services__outer__box::-webkit-scrollbar {
+  display: none;
+}
+
+/* BRAND CARDS */
+.brands__inner__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex: 0 0 240px;
+  height: 72px;
+  padding: 0 16px;
+
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  scroll-snap-align: start;
+}
+
 .brands__image a img {
-  object-fit: contain;
-  height: 32px;
   width: 108px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
 }
+
+/* PINK ARROWS */
 .circle__box {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #ff3e79;
-  color: #ff3e79;
-  border-radius: 20px;
+
   width: 40px;
   height: 40px;
-}
-.devices__inner__container {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 240px;
-    height: 160px;
-    padding: 16px;
-    background-color:#FFFFFF;
-;
-}
-.devices a {
-    text-decoration: none;
-    color: #1B1C21;
-}
-.flex--end {
-    align-self: flex-end;
-    margin-top: auto;
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-}
-.devices__outer__container {
-    display: flex;
-    width: 100%;
-    gap: 16px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+  flex-shrink: 0;
+
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  color: #ff3e79;
 }
 
-.price__box {
-    width: 260px;
-    height: 200px;
-    padding: 16px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    position: relative;
-    flex-shrink: 0;
-}
-.light--text {
-    color: #7E7E82;
-}
-.price__box p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-}
-.order__container{
-    width: 119px;
-    height: 32px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    background-color: #FF3E79;
-    border-radius: 16px;
-    color: #FFFFFF;
-    align-items: center;
-    position: absolute;
-    width: 119px;
-    bottom: 20px;
-    right: 14px;
-} 
- .services__outer__box {
-     display: flex;
-     width: 100%;
-     gap: 16px;
-     overflow-x: auto;
-     flex-wrap: nowrap;
- }
- .arrow--pink {
-  color:#FF3E79;
-  margin-left: 30px; 
- }
- footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 129px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 16px;
-}
- footer > div {
-  text-align: center;
- }
- footer {
-  margin-bottom: 1px;
- }
- .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 320px;
-    max-width: 100%;
-    height: 676px;
-    background-color: white;
-
-    display: flex;
-    flex-direction: column;
-    padding: 24px 16px;
-
-    transform: translateX(-100%);
-    visibility: hidden;
-    transition: transform 0.3s ease;
-    z-index: 1000;
-}
-
-.sidebar:target {
-    transform: translateX(0);
-    visibility: visible;
-}
-
-.sidebar__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sidebar__close {
-    color: #FF3E79;
-    font-size: 28px;
-    text-decoration: none;
-}
-
-.sidebar__navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.sidebar__navigation a {
-    color: #1B1C21;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.sidebar__bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: auto;
-}
-.chats__container {
+/* PAGINATION DOTS */
+.pagination {
   display: flex;
-  justify-content: flex-start;
-  gap: 12px;
-  width: 214px;
-  margin-top: 32px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+  height: 36px;
+  margin: 4px 0 0;
 }
-.dark--text {
-  font-family: TT Lakes Neue Trial;
+
+.pagination__dot {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background-color: #dddddd;
+}
+
+.pagination__dot--active {
+  background-color: #b5b6bc;
+}
+
+/* DEVICE CARDS */
+.devices__inner__container {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 240px;
+  height: 160px;
+  padding: 16px;
+
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  scroll-snap-align: start;
+}
+
+.devices a {
+  text-decoration: none;
+  color: #1b1c21;
+  font-size: 14px;
+}
+
+.flex--end {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* PRICE CARDS */
+.price__box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  position: relative;
+  flex: 0 0 260px;
+
+  height: 200px;
+  padding: 16px;
+
+  border-radius: 6px;
+  background-color: #ffffff;
+
+  scroll-snap-align: start;
+}
+
+.price__box p {
   font-weight: 400;
-  font-style: Regular;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.light--text {
+  color: #7e7e82;
+}
+
+.order__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  width: 119px;
+  height: 32px;
+
+  border-radius: 16px;
+  background-color: #ff3e79;
+
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* PROPOSAL */
+.proposal__section {
+  padding: 16px 16px 32px;
+}
+
+.proposal__section > p {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.2px;
 }
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: 16px;
-    margin-bottom: 24px;
+
+.proposal__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 220px;
+  margin-top: 40px;
+
+  color: #1b1c21;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
 }
 
-.pagination__dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #DDDDDD;
-    flex-shrink: 0;
+.proposal__link span:first-child {
+  max-width: 170px;
 }
 
-.pagination__dot--active {
-    background-color: #B5B6BC;
+.arrow--pink {
+  color: #ff3e79;
+  font-size: 22px;
 }
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 129px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-top: 1px solid #d9fff5;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+footer > div {
+  text-align: center;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  width: 320px;
+  max-width: 100%;
+  min-height: 676px;
+  height: 100dvh;
+
+  padding: 24px 16px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, visibility 0.3s;
+}
+
+.sidebar:target {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* SIDEBAR HEADER */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  background-color: #ff3e79;
+  color: #ffffff;
+
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.sidebar__search {
+  width: 40px;
+  height: 40px;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.sidebar__navigation a {
+  text-decoration: none;
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar__navigation a:first-child {
+  border-left: 4px solid #41f6d7;
+  margin-left: -16px;
+  padding-left: 12px;
+  color: #7e7e82;
+}
+
+/* CONTACT ICONS */
+.chats__container {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.chats__container img {
+  width: 40px;
+  height: 40px;
+}
+
+/* SIDEBAR CONTACT DETAILS */
+.sidebar__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sidebar__bottom p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
 }
