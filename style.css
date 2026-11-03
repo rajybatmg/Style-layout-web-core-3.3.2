@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* FONTS  */
+
 @font-face {
   font-family: "TT Lakes Neue Trial";
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf")
@@ -28,6 +30,8 @@
   font-style: normal;
 }
 
+/* GENERAL */
+
 body {
   font-family: "TT Lakes Neue Trial", sans-serif;
   color: #1b1c21;
@@ -37,27 +41,21 @@ a {
   color: inherit;
 }
 
-button,
-input {
-  font: inherit;
-}
-
-/* MOBILE FIRST — 320px */
-
 .outer__container {
   width: 100%;
   min-height: 100vh;
   background-color: #f8f8f8;
 }
 
-/* HEADER */
+/*MOBILE HEADER */ 
 
 .navigation__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 88px;
+
   width: 100%;
+  height: 88px;
   background-color: #ffffff;
 }
 
@@ -84,38 +82,42 @@ img[alt="CPS Logo"] {
   display: none;
 }
 
-/* TITLE */
+/* MAIN HEADING */
 
 .main__header__box {
   display: flex;
   align-items: center;
+
   width: 100%;
   min-height: 40px;
   margin-top: 24px;
   padding-left: 12px;
+
   border-left: 4px solid #41f6d7;
   border-radius: 0 4px 4px 0;
 }
 
 .main__header--style {
   font-size: 28px;
+  font-weight: 700;
   line-height: 40px;
   letter-spacing: -0.6px;
-  font-weight: 700;
 }
 
-/* SERVICES TABS */
+/* SERVICES NAVIGATION  */
 
 .services__container {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
+
   width: 100%;
   height: 40px;
   gap: 10px;
   margin-top: 24px;
   padding: 0 16px;
+
   overflow-x: auto;
-  flex-wrap: nowrap;
   scrollbar-width: none;
 }
 
@@ -126,9 +128,11 @@ img[alt="CPS Logo"] {
 .services {
   display: flex;
   align-items: center;
+
   flex: 0 0 246px;
   height: 40px;
   padding: 0 12px;
+
   border: 2px solid transparent;
   border-radius: 6px;
 }
@@ -140,12 +144,12 @@ img[alt="CPS Logo"] {
 }
 
 .services a {
-  text-decoration: none;
-  color: #7e7e82;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.2px;
+  color: #7e7e82;
+  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -160,6 +164,7 @@ img[alt="CPS Logo"] {
 .intro__text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .text__box {
@@ -169,26 +174,38 @@ img[alt="CPS Logo"] {
 
 .text__box p {
   font-size: 14px;
+  font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.2px;
 }
 
 .intro__extra {
   display: none;
+  margin-top: 16px;
 }
 
-/* READ MORE */
+/* TOGGLE CONTROLS */
+
+.toggle__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
 
 .readmore__box {
   display: flex;
   align-items: center;
-  
   gap: 8px;
-  margin: 16px 0 16px 16px;
+
   min-height: 24px;
+  margin: 16px 0 16px 16px;
+
   font-size: 16px;
-  line-height: 24px;
   font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
 }
 
 .readmore__icon {
@@ -196,12 +213,41 @@ img[alt="CPS Logo"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 24px;
   height: 24px;
+  padding-bottom: 8px;
+
   color: #41f6d7;
   line-height: 9px;
-  padding-bottom: 5px;
 }
+
+.toggle__hide {
+  display: none;
+}
+
+/* Keyboard focus for hidden checkbox toggles */
+
+.toggle__input:focus-visible ~ .readmore__box {
+  outline: 2px solid #41f6d7;
+  outline-offset: 3px;
+}
+
+/* READ MORE FUNCTIONALITY */
+
+#read-more:checked ~ .text__box .intro__extra {
+  display: block;
+}
+
+#read-more:checked ~ .readmore__box .toggle__show {
+  display: none;
+}
+
+#read-more:checked ~ .readmore__box .toggle__hide {
+  display: inline;
+}
+
+/* Main Image*/
 
 .image img {
   display: block;
@@ -211,7 +257,7 @@ img[alt="CPS Logo"] {
   object-fit: cover;
 }
 
-/* SHARED SECTION STYLING */
+/* Section Styling */
 
 .brands__section,
 .devices__section,
@@ -223,6 +269,7 @@ img[alt="CPS Logo"] {
 .section__title {
   display: flex;
   align-items: center;
+
   min-height: 64px;
   padding: 16px;
 
@@ -240,16 +287,18 @@ img[alt="CPS Logo"] {
   );
 }
 
-/* HORIZONTAL SCROLLING */
+/* Mobile Card*/
 
 .repair__brands__container,
 .devices__outer__container,
 .services__outer__box {
   display: flex;
   flex-wrap: nowrap;
-  gap: 16px;
+
   width: 100%;
+  gap: 16px;
   padding: 0 16px;
+
   overflow-x: auto;
   scroll-snap-type: x proximity;
   scrollbar-width: none;
@@ -261,7 +310,7 @@ img[alt="CPS Logo"] {
   display: none;
 }
 
-/* BRAND CARDS */
+/* Brand cards */
 
 .brands__inner__container {
   display: flex;
@@ -269,8 +318,8 @@ img[alt="CPS Logo"] {
   justify-content: space-between;
 
   flex: 0 0 240px;
-  height: 72px;
   min-width: 0;
+  height: 72px;
   padding: 0 16px;
 
   background-color: #ffffff;
@@ -291,7 +340,7 @@ img[alt="CPS Logo"] {
   object-fit: contain;
 }
 
-/* PINK ARROW */
+/* Pink arrows*/
 
 .circle__box {
   display: flex;
@@ -304,6 +353,7 @@ img[alt="CPS Logo"] {
 
   border: 2px solid #ff3e79;
   border-radius: 50%;
+
   color: #ff3e79;
   background-color: #ffffff;
   text-decoration: none;
@@ -311,14 +361,15 @@ img[alt="CPS Logo"] {
   line-height: 1;
 }
 
-/* PAGINATION */
+/* Pagination*/
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 8px;
-  height: 36px;
+  min-height: 36px;
   margin-top: 4px;
 }
 
@@ -334,22 +385,15 @@ img[alt="CPS Logo"] {
   background-color: #b5b6bc;
 }
 
-/* SHOW ALL */
-
-.showall__box {
-  margin-top: 4px;
-  margin-bottom: 16px;
-}
-
-/* DEVICE CARDS */
+/* Device Card Section*/
 
 .devices__inner__container {
   display: flex;
   flex-direction: column;
 
   flex: 0 0 240px;
-  height: 160px;
   min-width: 0;
+  height: 160px;
   padding: 16px;
 
   background-color: #ffffff;
@@ -369,7 +413,64 @@ img[alt="CPS Logo"] {
   margin-top: auto;
 }
 
-/*SERVICE PRICES — MOBILE */
+/* Show all functionality fo mobile device or small screen display*/
+
+.showall__box {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+/* Expand brands into one column */
+
+#show-brands:checked ~ .repair__brands__container {
+  flex-direction: column;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+
+#show-brands:checked
+  ~ .repair__brands__container
+  .brands__inner__container {
+  flex: none;
+  width: 100%;
+}
+
+/* Expand devices into one column */
+
+#show-devices:checked ~ .devices__outer__container {
+  flex-direction: column;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+
+#show-devices:checked
+  ~ .devices__outer__container
+  .devices__inner__container {
+  flex: none;
+  width: 100%;
+}
+
+/* Hide pagination when expanded */
+
+#show-brands:checked ~ .pagination,
+#show-devices:checked ~ .pagination {
+  display: none;
+}
+
+/* Change Show all to Show less */
+
+#show-brands:checked ~ .showall__box .toggle__show,
+#show-devices:checked ~ .showall__box .toggle__show {
+  display: none;
+}
+
+#show-brands:checked ~ .showall__box .toggle__hide,
+#show-devices:checked ~ .showall__box .toggle__hide {
+  display: inline;
+}
+
+/* Service prices for mobile display */
+
 .price__table__header {
   display: none;
 }
@@ -377,7 +478,7 @@ img[alt="CPS Logo"] {
 .price__box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 
   position: relative;
   flex: 0 0 260px;
@@ -404,29 +505,31 @@ img[alt="CPS Logo"] {
 
 .order__container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 
   position: absolute;
-  bottom: 16px;
   right: 16px;
+  bottom: 16px;
 
   width: 119px;
   height: 32px;
 
   background-color: #ff3e79;
   border-radius: 16px;
+
   color: #ffffff;
   font-size: 14px;
   text-decoration: none;
 }
 
-/* COMMERCIAL PROPOSAL */
+/* Commercial proposal*/
 
 .proposal__section {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
   padding: 16px 16px 32px;
 }
 
@@ -440,6 +543,7 @@ img[alt="CPS Logo"] {
   display: flex;
   align-items: flex-end;
   gap: 12px;
+
   width: 220px;
 
   font-size: 16px;
@@ -458,15 +562,15 @@ img[alt="CPS Logo"] {
   color: #ff3e79;
 }
 
-/*FOOTER — MOBILE */
+/* Footer Mobile */
 
 .footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
 
+  gap: 12px;
   width: 100%;
   min-height: 129px;
   padding: 16px;
@@ -482,11 +586,11 @@ img[alt="CPS Logo"] {
 }
 
 .footer a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-/* SIDEBAR — CSS ONLY*/
+/* Sidebar*/
 
 .sidebar {
   display: flex;
@@ -508,15 +612,20 @@ img[alt="CPS Logo"] {
 
   visibility: hidden;
   transform: translateX(-100%);
+
   transition:
     transform 0.3s ease,
     visibility 0.3s ease;
 }
 
+/* Open sidebar */
+
 .sidebar:target {
   visibility: visible;
   transform: translateX(0);
 }
+
+/* Sidebar header */
 
 .sidebar__header {
   display: flex;
@@ -528,12 +637,14 @@ img[alt="CPS Logo"] {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 40px;
   height: 40px;
 
-  border-radius: 50%;
   background-color: #ff3e79;
-  color: white;
+  border-radius: 50%;
+
+  color: #ffffff;
   text-decoration: none;
   font-size: 24px;
 }
@@ -544,7 +655,7 @@ img[alt="CPS Logo"] {
   height: 40px;
 }
 
-/* SIDEBAR LINKS */
+/* Sidebar navigation */
 
 .sidebar__navigation {
   display: flex;
@@ -555,20 +666,21 @@ img[alt="CPS Logo"] {
 
 .sidebar__navigation a {
   font-size: 16px;
-  line-height: 24px;
   font-weight: 500;
+  line-height: 24px;
+
   color: #1b1c21;
   text-decoration: none;
 }
 
 .sidebar__link--active {
-  color: #7e7e82 !important;
+  color: #7e7e82;
   border-left: 4px solid #41f6d7;
   padding-left: 12px;
   margin-left: -16px;
 }
 
-/* CONTACT DETAILS */
+/* Sidebar contact area */
 
 .sidebar__contact {
   margin-top: auto;
@@ -603,36 +715,205 @@ img[alt="CPS Logo"] {
   font-weight: 700;
 }
 
+/* Language selection */
+
 .sidebar__languages {
   display: flex;
   gap: 8px;
 }
 
 .sidebar__languages input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .sidebar__languages label {
-  color: #1B1C21;
-  cursor: pointer;
   font-size: 16px;
+  color: #1b1c21;
+  cursor: pointer;
 }
 
 .sidebar__languages input:checked + label {
-  color: #FF3E79;
+  color: #ff3e79;
 }
-/* FOR BIGGER SCREEN */
+
+.sidebar__languages input:focus-visible + label {
+  outline: 2px solid #ff3e79;
+  outline-offset: 3px;
+}
+
+/* TABLET — 768px AND ABOVE*/
+
+@media (min-width: 768px) {
+
+  /* General spacing */
+
+  .navigation__container {
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .main__header__box {
+    padding-left: 24px;
+  }
+
+  .services__container {
+    padding: 0 24px;
+  }
+
+  .services {
+    flex-basis: auto;
+  }
+
+  /* Introduction */
+
+  .intro__container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding: 0 24px 32px;
+  }
+
+  .intro__text {
+    flex: 1 1 0;
+  }
+
+  .text__box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .intro__text .readmore__box {
+    margin-left: 0;
+  }
+
+  .intro__container .image {
+    flex: 0 0 45%;
+    min-width: 0;
+  }
+
+  .intro__container .image img {
+    width: 100%;
+  }
+
+  /* Section headings */
+
+  .section__title {
+    padding: 16px 24px;
+  }
+
+  /* BRAND GRID — 2 COLUMNS */
+
+  .repair__brands__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    padding: 0 24px;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .brands__inner__container {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Device cards */
+
+  .devices__outer__container {
+    flex-wrap: wrap;
+    overflow: visible;
+    padding: 0 24px;
+    scroll-snap-type: none;
+  }
+
+  .devices__inner__container {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+
+  /* Tablet already displays all cards */
+
+  .brands__section .pagination,
+  .devices__section .pagination,
+  .brands__section .showall__box,
+  .devices__section .showall__box {
+    display: none;
+  }
+
+  /* Prevent checked mobile layouts from overriding Grid */
+
+  #show-brands:checked ~ .repair__brands__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #show-brands:checked
+    ~ .repair__brands__container
+    .brands__inner__container {
+    width: 100%;
+  }
+
+  #show-devices:checked ~ .devices__outer__container {
+    flex-direction: row;
+  }
+
+  #show-devices:checked
+    ~ .devices__outer__container
+    .devices__inner__container {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  /* Prices remain scrollable until desktop */
+
+  .services__outer__box {
+    padding: 0 24px;
+  }
+
+  .proposal__section {
+    padding: 24px;
+  }
+
+  /* Footer */
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+
+    padding: 24px;
+  }
+
+  .footer > div {
+    flex: 1;
+  }
+
+  .footer > div:first-child {
+    text-align: left;
+  }
+
+  .footer > div:last-child {
+    text-align: right;
+  }
+}
+
+/* DESKTOP — 1120px AND ABOVE*/
 
 @media (min-width: 1120px) {
 
-  /* SIDEBAR */
+  /* SIDEBAR ALWAYS VISIBLE */
 
   .sidebar {
     width: 306px;
-    height: 881.78;
-    min-height: 0;
     max-width: none;
-
+    height: 100vh;
+    height: 100dvh;
     padding: 24px 20px;
 
     visibility: visible;
@@ -645,7 +926,6 @@ img[alt="CPS Logo"] {
   }
 
   .sidebar__navigation {
-    gap: 24px;
     margin-top: 32px;
   }
 
@@ -659,14 +939,13 @@ img[alt="CPS Logo"] {
   .outer__container {
     width: calc(100% - 306px);
     margin-left: 306px;
-    min-height: 100vh;
   }
 
   .mobile__header {
     display: none;
   }
 
-  /* DESKTOP TITLE AND ACTIONS */
+  /* DESKTOP HEADER */
 
   .main__header__box {
     display: flex;
@@ -677,8 +956,6 @@ img[alt="CPS Logo"] {
     min-height: 56px;
     margin-top: 24px;
     padding: 0 24px;
-
-    border-left: 4px solid #41f6d7;
   }
 
   .main__header--style {
@@ -709,21 +986,18 @@ img[alt="CPS Logo"] {
     height: 40px;
   }
 
-  /* HORIZONTAL SERVICES MENU */
+  /* SERVICES TABS */
 
   .services__container {
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-
     height: auto;
     min-height: 40px;
 
-    padding: 0 24px;
-    margin: 8px 0 24px;
     gap: 8px;
+    margin: 8px 0 24px;
+    padding: 0 24px;
 
-    overflow-x: visible;
+    overflow: visible;
   }
 
   .services {
@@ -736,11 +1010,9 @@ img[alt="CPS Logo"] {
     font-size: 14px;
   }
 
-  /* INTRO SECTION */
+  /* INTRODUCTION */
 
   .intro__container {
-    display: flex;
-    flex-direction: row;
     align-items: stretch;
     gap: 24px;
 
@@ -753,20 +1025,11 @@ img[alt="CPS Logo"] {
     min-width: 0;
   }
 
-  .text__box {
-    width: 100%;
-    margin: 0;
-  }
-
   .text__box p {
-    font-size: 14px;
     line-height: 20px;
   }
 
-  .intro__extra {
-    display: block;
-    margin-top: 16px;
-  }
+  /* Read more still controls extra text */
 
   .intro__text .readmore__box {
     margin: 24px 0 0;
@@ -784,38 +1047,20 @@ img[alt="CPS Logo"] {
     object-fit: cover;
   }
 
-  /* SECTION HEADINGS */
-
-  .section__title {
-    padding: 16px 24px;
-  }
-
-  /* BRAND CARDS: 4 PER ROW */
+  /* BRAND GRID — 4 COLUMNS */
 
   .repair__brands__container {
-    display: flex;
-    flex-wrap: wrap;
-    overflow-x: visible;
-    gap: 16px;
-    padding: 0 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .brands__inner__container {
-    flex: 0 0 calc((100% - 48px) / 4);
-    min-width: 0;
     height: 72px;
     padding: 0 10px;
-  }
-
-  .brands__image {
-    flex: 1;
-    min-width: 0;
   }
 
   .brands__image img {
     width: 90px;
     max-width: 100%;
-    height: 32px;
   }
 
   .brands__inner__container .circle__box {
@@ -824,14 +1069,16 @@ img[alt="CPS Logo"] {
     margin-left: 4px;
   }
 
-  /* DEVICES: 4 PER ROW */
+  /* Keep four columns even if checkbox was checked */
+
+  #show-brands:checked ~ .repair__brands__container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* DEVICES — FOUR IN ONE ROW */
 
   .devices__outer__container {
-    display: flex;
     flex-wrap: nowrap;
-    overflow-x: visible;
-    gap: 16px;
-    padding: 0 24px;
   }
 
   .devices__inner__container {
@@ -840,43 +1087,39 @@ img[alt="CPS Logo"] {
     height: 160px;
   }
 
-  .devices__inner__container .circle__box {
-    width: 40px;
-    height: 40px;
+  #show-devices:checked
+    ~ .devices__outer__container
+    .devices__inner__container {
+    flex: 1 1 0;
   }
 
-  /* HIDE MOBILE PAGINATION */
-
-  .pagination {
-    display: none;
-  }
-
-  /* SHOW ALL BUTTONS */
-
-  .showall__box {
-    margin: 16px 0 24px 24px;
-  }
-
-  /* SERVICE PRICES TABLE LAYOUT */
+  /* SERVICE PRICES AS A TABLE */
 
   .price__table__header {
     display: flex;
     align-items: center;
     gap: 16px;
+
     margin: 0 24px;
     padding: 12px 16px;
+
     color: #7e7e82;
     font-size: 14px;
     line-height: 18px;
   }
 
-  .price__table__header span:nth-child(1) {
+  /* Matching ratios for headings and price rows */
+
+  .price__table__header span:nth-child(1),
+  .price__box > div:nth-child(1) {
     flex: 2 1 0;
     min-width: 0;
   }
 
   .price__table__header span:nth-child(2),
-  .price__table__header span:nth-child(3) {
+  .price__table__header span:nth-child(3),
+  .price__box > div:nth-child(2),
+  .price__box > div:nth-child(3) {
     flex: 1 1 0;
     min-width: 0;
   }
@@ -886,52 +1129,34 @@ img[alt="CPS Logo"] {
   }
 
   .services__outer__box {
-    display: flex;
     flex-direction: column;
     gap: 0;
     padding: 0 24px;
     overflow: visible;
+    scroll-snap-type: none;
   }
 
   .price__box {
-    display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+
     flex: 0 0 auto;
     width: 100%;
     min-height: 64px;
     height: auto;
     padding: 12px 16px;
+
     position: static;
-    background-color: #ffffff;
     border-radius: 0;
     border-bottom: 1px solid #eaeaea;
-  }
-
-  .price__box > div:nth-child(1) {
-    flex: 2 1 0;
-    min-width: 0;
-  }
-
-  .price__box > div:nth-child(2),
-  .price__box > div:nth-child(3) {
-    flex: 1 1 0;
-    min-width: 0;
   }
 
   .price__box .light--text {
     display: none;
   }
 
-  .price__box p {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
   .price__box .order__container {
     position: static;
-
     flex: 0 0 100px;
     width: 100px;
     height: 32px;
@@ -940,8 +1165,8 @@ img[alt="CPS Logo"] {
   /* PROPOSAL */
 
   .proposal__section {
-    padding: 24px 24px 40px;
     gap: 24px;
+    padding: 24px 24px 40px;
   }
 
   .proposal__section > p {
@@ -956,33 +1181,10 @@ img[alt="CPS Logo"] {
     max-width: none;
   }
 
-  /* FOOTER HORIZONTAL */
+  /* FOOTER */
 
   .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-
-    width: 100%;
     min-height: 80px;
     padding: 24px;
-  }
-
-  .footer > div {
-    flex: 1;
-  }
-
-  .footer > div:first-child {
-    text-align: left;
-  }
-
-  .footer > div:nth-child(2) {
-    text-align: center;
-  }
-
-  .footer > div:last-child {
-    text-align: right;
   }
 }
