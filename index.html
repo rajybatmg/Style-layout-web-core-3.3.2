@@ -1,635 +1,521 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPS — Services and Support</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPS — Services and Support</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-  <body>
-    <!-- SIDEBAR -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar__header">
-        <a href="#" class="sidebar__close" aria-label="Close menu">
-          ✕
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__header">
+      <a href="#" class="sidebar__close" aria-label="Close menu">✕</a>
+
+      <a href="#" class="sidebar__logo">
+        <img src="./Assets/Group.svg" alt="CPS Logo" />
+      </a>
+
+      <a href="#" class="sidebar__search" aria-label="Search">
+        <img src="./Assets/Search Icon.svg" alt="" />
+      </a>
+    </div>
+
+    <nav class="sidebar__navigation" aria-label="Sidebar navigation">
+      <a href="#">Equipment repair</a>
+      <a href="#services" class="sidebar__link--active">Services and support</a>
+      <a href="#">Corporate clients</a>
+      <a href="#">Equipment sellers</a>
+      <a href="#">Partners</a>
+      <a href="#">Manufacturers</a>
+      <a href="#">Our service centres</a>
+      <a href="#">Contacts</a>
+    </nav>
+
+    <div class="sidebar__contact">
+      <div class="chats__container">
+        <a href="tel:88008908900" aria-label="Phone">
+          <img src="./Assets/Phone Icon.svg" alt="" />
         </a>
 
-        <a href="#" class="sidebar__logo">
+        <a href="mailto:mail@cps.com" aria-label="Email">
+          <img src="./Assets/Message Icon.svg" alt="" />
+        </a>
+
+        <a href="#" aria-label="Profile">
+          <img src="./Assets/Profile Icon.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="sidebar__bottom">
+        <a href="mailto:mail@cps.com">mail@cps.com</a>
+
+        <a href="tel:88008908900" class="sidebar__phone">
+          8 800 890 8900
+        </a>
+
+        <div class="sidebar__languages">
+          <input type="radio" name="language" id="ru" />
+          <label for="ru">RU</label>
+
+          <input type="radio" name="language" id="en" checked />
+          <label for="en">EN</label>
+
+          <input type="radio" name="language" id="ch" />
+          <label for="ch">CH</label>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN WEBSITE -->
+  <div class="outer__container">
+
+    <!-- HEADER -->
+    <header class="mobile__header">
+      <nav class="navigation__container" aria-label="Mobile navigation">
+        <a href="#sidebar" aria-label="Open menu">
+          <img src="./Assets/Menu Icon.svg" alt="Main Menu Icon" />
+        </a>
+
+        <a href="#">
           <img src="./Assets/Group.svg" alt="CPS Logo" />
         </a>
 
-        <a href="#" class="sidebar__search" aria-label="Search">
-          <img src="./Assets/Search Icon.svg" alt="" />
+        <div class="vertical__line"></div>
+
+        <a href="#" aria-label="Submit a request">
+          <img src="./Assets/Repair Icon.svg" alt="CPS Repair Icon" />
         </a>
+
+        <a href="#" aria-label="Repair status">
+          <img src="./Assets/Status Icon.svg" alt="CPS Status Icon" />
+        </a>
+      </nav>
+    </header>
+
+    <main id="services">
+
+      <!-- MAIN HEADING -->
+      <div class="main__header__box">
+        <h1 class="main__header--style">Services and support</h1>
+
+        <div class="desktop__actions">
+          <a href="#">
+            <span>Submit a request</span>
+            <img src="./Assets/Repair Icon.svg" alt="" />
+          </a>
+
+          <a href="#">
+            <span>Repair status</span>
+            <img src="./Assets/Status Icon.svg" alt="" />
+          </a>
+        </div>
       </div>
 
-      <nav class="sidebar__navigation" aria-label="Sidebar navigation">
-        <a href="#">Equipment repair</a>
-        <a href="#services" class="sidebar__link--active">
-          Services and support
-        </a>
-        <a href="#">Corporate clients</a>
-        <a href="#">Equipment sellers</a>
-        <a href="#">Partners</a>
-        <a href="#">Manufacturers</a>
-        <a href="#">Our service centres</a>
-        <a href="#">Contacts</a>
+      <!-- SERVICES TABS -->
+      <nav class="services__container" aria-label="Service categories">
+        <div class="services">
+          <a href="#brands">Brands we repair</a>
+        </div>
+
+        <div class="services">
+          <a href="#devices">Additional services</a>
+        </div>
+
+        <div class="services">
+          <a href="#prices">Service prices</a>
+        </div>
+
+        <div class="services">
+          <a href="#">Service center addresses</a>
+        </div>
+
+        <div class="services">
+          <a href="#">Special prices</a>
+        </div>
+
+        <div class="services">
+          <a href="#">Reviews</a>
+        </div>
       </nav>
 
-      <div class="sidebar__contact">
-        <div class="chats__container">
-          <a href="tel:88008908900">
-            <img src="./Assets/Phone Icon.svg" alt="Phone" />
-          </a>
-
-          <a href="mailto:mail@cps.com">
-            <img src="./Assets/Message Icon.svg" alt="Email" />
-          </a>
-
-          <a href="#">
-            <img src="./Assets/Profile Icon.svg" alt="Profile" />
-          </a>
-        </div>
-
-        <div class="sidebar__bottom">
-          <a href="mailto:mail@cps.com">mail@cps.com</a>
-
-          <a href="tel:88008908900" class="sidebar__phone">
-            8 800 890 8900
-          </a>
-
-          <div class="sidebar__languages">
-            <input type="radio" name="language" id="ru" />
-            <label for="ru">RU</label>
-
-            <input type="radio" name="language" id="en" checked />
-            <label for="en">EN</label>
-
-            <input type="radio" name="language" id="ch" />
-            <label for="ch">CH</label>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- MAIN WEBSITE -->
-    <div class="outer__container">
-      <!-- MOBILE HEADER -->
-      <header class="mobile__header">
-        <nav class="navigation__container">
-          <a href="#sidebar" aria-label="Open menu">
-            <img
-              src="./Assets/Menu Icon.svg"
-              alt="Main Menu Icon"
-            />
-          </a>
-
-          <a href="#">
-            <img src="./Assets/Group.svg" alt="CPS Logo" />
-          </a>
-
-          <div class="vertical__line"></div>
-
-          <a href="#">
-            <img
-              src="./Assets/Repair Icon.svg"
-              alt="CPS Repair Icon"
-            />
-          </a>
-
-          <a href="#">
-            <img
-              src="./Assets/Status Icon.svg"
-              alt="CPS Status Icon"
-            />
-          </a>
-        </nav>
-      </header>
-
-      <main id="services">
-        <!-- PAGE HEADING -->
-        <div class="main__header__box">
-          <h1 class="main__header--style">
-            Services and support
-          </h1>
-
-          <div class="desktop__actions">
-            <a href="#">
-              <span>Submit a request</span>
-              <img src="./Assets/Repair Icon.svg" alt="" />
-            </a>
-
-            <a href="#">
-              <span>Repair status</span>
-              <img src="./Assets/Status Icon.svg" alt="" />
-            </a>
-          </div>
-        </div>
-
-        <!-- SERVICES NAVIGATION -->
-        <nav class="services__container" aria-label="Service categories">
-          <div class="services">
-            <a href="#brands">Brands we repair</a>
-          </div>
-
-          <div class="services">
-            <a href="#devices">Additional services</a>
-          </div>
-
-          <div class="services">
-            <a href="#prices">Service prices</a>
-          </div>
-
-          <div class="services">
-            <a href="#">Service center addresses</a>
-          </div>
-
-          <div class="services">
-            <a href="#">Special prices</a>
-          </div>
-
-          <div class="services">
-            <a href="#">Reviews</a>
-          </div>
-        </nav>
-
-        <!-- INTRODUCTION / READ MORE -->
-        <section class="intro__container">
-          <div class="intro__text">
-            <input
-              type="checkbox"
-              id="read-more"
-              class="toggle__input"
-            />
-
-            <div class="text__box">
-              <p>
-                We are an authorised service centre for Dell
-                equipment repairs. Only with us can you repair
-                your Dell laptop with the official
-                manufacturer's warranty.
-              </p>
-
-              <p class="intro__extra">
-                We have been successfully operating since 1992
-                and have earned a reputation as a reliable
-                partner, as evidenced by a large number of
-                regular clients. We take pride in being
-                recommended and in turn, being advised to
-                family and friends.
-              </p>
-            </div>
-
-            <label for="read-more" class="readmore__box">
-              <span class="readmore__icon" aria-hidden="true">
-                <span>⌄</span>
-                <span>⌄</span>
-              </span>
-
-              <span class="toggle__show">Read more</span>
-              <span class="toggle__hide">Show less</span>
-            </label>
-          </div>
-
-          <div class="image">
-            <img
-              src="./Assets/Image.png"
-              alt="CPS service centre"
-            />
-          </div>
-        </section>
-
-        <!-- REPAIR BRANDS -->
-        <section class="brands__section" id="brands">
-          <h2 class="section__title">
-            Repair of equipment from various brands
-          </h2>
-
+      <!-- INTRODUCTION -->
+      <section class="intro__container">
+        <div class="intro__text">
           <input
             type="checkbox"
-            id="show-brands"
+            id="read-more"
             class="toggle__input"
           />
 
-          <div class="repair__brands__container">
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/lenovo.png"
-                    alt="Lenovo"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Lenovo repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/samsung.png"
-                    alt="Samsung"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Samsung repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/apple.png"
-                    alt="Apple"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Apple repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/viewsonic.png"
-                    alt="ViewSonic"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="ViewSonic repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/bosch.png"
-                    alt="Bosch"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Bosch repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img src="./Brands_Logo/hp.png" alt="HP" />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="HP repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/acer.png"
-                    alt="Acer"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Acer repair"
-              >›</a>
-            </div>
-
-            <div class="brands__inner__container">
-              <div class="brands__image">
-                <a href="#">
-                  <img
-                    src="./Brands_Logo/sony.png"
-                    alt="Sony"
-                  />
-                </a>
-              </div>
-
-              <a
-                href="#"
-                class="circle__box"
-                aria-label="Sony repair"
-              >›</a>
-            </div>
-          </div>
-
-          <!-- BRAND PAGINATION -->
-          <div class="pagination">
-            <span class="pagination__dot pagination__dot--active"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-          </div>
-
-          <!-- SHOW ALL BRANDS -->
-          <label
-            for="show-brands"
-            class="readmore__box showall__box"
-          >
-            <span class="readmore__icon" aria-hidden="true">
-              <span>⌄</span>
-              <span>⌄</span>
-            </span>
-
-            <span class="toggle__show">Show all</span>
-            <span class="toggle__hide">Show less</span>
-          </label>
-        </section>
-
-        <!-- REPAIR DEVICES -->
-        <section class="devices__section" id="devices">
-          <h2 class="section__title">
-            Repair of various types of equipment
-          </h2>
-
-          <input
-            type="checkbox"
-            id="show-devices"
-            class="toggle__input"
-          />
-
-          <div class="devices__outer__container">
-            <div class="devices__inner__container">
-              <a href="#" class="devices__name">
-                Laptop repair
-              </a>
-
-              <a
-                href="#"
-                class="circle__box flex--end"
-                aria-label="Laptop repair"
-              >›</a>
-            </div>
-
-            <div class="devices__inner__container">
-              <a href="#" class="devices__name">
-                Tablet repair
-              </a>
-
-              <a
-                href="#"
-                class="circle__box flex--end"
-                aria-label="Tablet repair"
-              >›</a>
-            </div>
-
-            <div class="devices__inner__container">
-              <a href="#" class="devices__name">
-                PC repair
-              </a>
-
-              <a
-                href="#"
-                class="circle__box flex--end"
-                aria-label="PC repair"
-              >›</a>
-            </div>
-
-            <div class="devices__inner__container">
-              <a href="#" class="devices__name">
-                Monitor repair
-              </a>
-
-              <a
-                href="#"
-                class="circle__box flex--end"
-                aria-label="Monitor repair"
-              >›</a>
-            </div>
-          </div>
-
-          <!-- DEVICE PAGINATION -->
-          <div class="pagination">
-            <span class="pagination__dot pagination__dot--active"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-          </div>
-
-          <!-- SHOW ALL DEVICES -->
-          <label
-            for="show-devices"
-            class="readmore__box showall__box"
-          >
-            <span class="readmore__icon" aria-hidden="true">
-              <span>⌄</span>
-              <span>⌄</span>
-            </span>
-
-            <span class="toggle__show">Show all</span>
-            <span class="toggle__hide">Show less</span>
-          </label>
-        </section>
-
-        <!-- SERVICE PRICES -->
-        <section class="prices__section" id="prices">
-          <h2 class="section__title">Service prices</h2>
-
-          <!-- DESKTOP TABLE HEADER -->
-          <div class="price__table__header">
-            <span>Repair services</span>
-            <span>Price</span>
-            <span>Deadline</span>
-            <span></span>
-          </div>
-
-          <div class="services__outer__box">
-            <!-- PRICE 1 -->
-            <div class="price__box">
-              <div>
-                <p class="light--text">Repair services</p>
-                <p>Diagnostics</p>
-              </div>
-
-              <div>
-                <p class="light--text">Price</p>
-                <p>Free of charge</p>
-              </div>
-
-              <div>
-                <p class="light--text">Term</p>
-                <p>30 min</p>
-              </div>
-
-              <a href="#" class="order__container">
-                <span>ORDER</span>
-                <span>›</span>
-              </a>
-            </div>
-
-            <!-- PRICE 2 -->
-            <div class="price__box">
-              <div>
-                <p class="light--text">Repair services</p>
-                <p>Display replacement</p>
-              </div>
-
-              <div>
-                <p class="light--text">Price</p>
-                <p>1,000 ₽</p>
-              </div>
-
-              <div>
-                <p class="light--text">Term</p>
-                <p>30–120 min</p>
-              </div>
-
-              <a href="#" class="order__container">
-                <span>ORDER</span>
-                <span>›</span>
-              </a>
-            </div>
-
-            <!-- PRICE 3 -->
-            <div class="price__box">
-              <div>
-                <p class="light--text">Repair services</p>
-                <p>Polyphonic speaker replacement</p>
-              </div>
-
-              <div>
-                <p class="light--text">Price</p>
-                <p>1,000 ₽</p>
-              </div>
-
-              <div>
-                <p class="light--text">Term</p>
-                <p>30–120 min</p>
-              </div>
-
-              <a href="#" class="order__container">
-                <span>ORDER</span>
-                <span>›</span>
-              </a>
-            </div>
-
-            <!-- PRICE 4 -->
-            <div class="price__box">
-              <div>
-                <p class="light--text">Repair services</p>
-                <p>Testing with a technical report</p>
-              </div>
-
-              <div>
-                <p class="light--text">Price</p>
-                <p>1,000 ₽</p>
-              </div>
-
-              <div>
-                <p class="light--text">Term</p>
-                <p>30–120 min</p>
-              </div>
-
-              <a href="#" class="order__container">
-                <span>ORDER</span>
-                <span>›</span>
-              </a>
-            </div>
-
-            <!-- PRICE 5 -->
-            <div class="price__box">
-              <div>
-                <p class="light--text">Repair services</p>
-                <p>Software replacement</p>
-              </div>
-
-              <div>
-                <p class="light--text">Price</p>
-                <p>1,000 ₽</p>
-              </div>
-
-              <div>
-                <p class="light--text">Term</p>
-                <p>30–120 min</p>
-              </div>
-
-              <a href="#" class="order__container">
-                <span>ORDER</span>
-                <span>›</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- PRICE PAGINATION -->
-          <div class="pagination">
-            <span class="pagination__dot pagination__dot--active"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-          </div>
-
-          <!-- PROPOSAL -->
-          <div class="proposal__section">
+          <div class="text__box">
             <p>
-              All prices include VAT. The cost of repair is
-              indicated for a single service. To receive a
-              commercial proposal for ongoing maintenance,
-              please submit a request.
+              We are an authorised service centre for Dell equipment repairs.
+              Only with us can you repair your Dell laptop with the official
+              manufacturer's warranty.
             </p>
 
-            <a href="#" class="proposal__link">
-              <span>Get a commercial proposal</span>
-              <span class="arrow--pink">›</span>
+            <p class="intro__extra">
+              We have been successfully operating since 1992 and have earned
+              a reputation as a reliable partner, as evidenced by a large
+              number of regular clients. We take pride in being recommended
+              and in turn, being advised to family and friends.
+            </p>
+          </div>
+
+          <label for="read-more" class="readmore__box">
+            <span class="readmore__icon" aria-hidden="true">
+              <span>⌄</span>
+              <span>⌄</span>
+            </span>
+
+            <span class="toggle__show">Read more</span>
+            <span class="toggle__hide">Show less</span>
+          </label>
+        </div>
+
+        <div class="image">
+          <img src="./Assets/Image.png" alt="CPS service centre" />
+        </div>
+      </section>
+
+      <!-- REPAIR BRANDS -->
+      <section class="brands__section" id="brands">
+        <h2 class="section__title">
+          Repair of equipment from various brands
+        </h2>
+
+        <input
+          type="checkbox"
+          id="show-brands"
+          class="toggle__input"
+        />
+
+        <div class="repair__brands__container">
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/lenovo.png" alt="Lenovo" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Lenovo repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/samsung.png" alt="Samsung" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Samsung repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/apple.png" alt="Apple" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Apple repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/viewsonic.png" alt="ViewSonic" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="ViewSonic repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/bosch.png" alt="Bosch" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Bosch repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/hp.png" alt="HP" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="HP repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/acer.png" alt="Acer" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Acer repair">›</a>
+          </div>
+
+          <div class="brands__inner__container">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/sony.png" alt="Sony" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Sony repair">›</a>
+          </div>
+
+          <div class="brands__inner__container brands__extra">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/lenovo.png" alt="Lenovo" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Lenovo repair">›</a>
+          </div>
+
+          <div class="brands__inner__container brands__extra">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/samsung.png" alt="Samsung" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Samsung repair">›</a>
+          </div>
+
+          <div class="brands__inner__container brands__extra">
+            <div class="brands__image">
+              <a href="#">
+                <img src="./Brands_Logo/apple.png" alt="Apple" />
+              </a>
+            </div>
+            <a href="#" class="circle__box" aria-label="Apple repair">›</a>
+          </div>
+        </div>
+
+        <div class="pagination" aria-hidden="true">
+          <span class="pagination__dot pagination__dot--active"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+        </div>
+
+        <label for="show-brands" class="readmore__box showall__box">
+          <span class="readmore__icon" aria-hidden="true">
+            <span>⌄</span>
+            <span>⌄</span>
+          </span>
+          <span class="toggle__show">Show all</span>
+          <span class="toggle__hide">Hide</span>
+        </label>
+      </section>
+
+      <!-- REPAIR DEVICES -->
+      <section class="devices__section" id="devices">
+        <h2 class="section__title">
+          Repair of various types of equipment
+        </h2>
+
+        <input
+          type="checkbox"
+          id="show-devices"
+          class="toggle__input"
+        />
+
+        <div class="devices__outer__container">
+          <div class="devices__inner__container">
+            <a href="#" class="devices__name">Laptop repair</a>
+            <a href="#" class="circle__box flex--end" aria-label="Laptop repair">›</a>
+          </div>
+
+          <div class="devices__inner__container">
+            <a href="#" class="devices__name">Tablet repair</a>
+            <a href="#" class="circle__box flex--end" aria-label="Tablet repair">›</a>
+          </div>
+
+          <div class="devices__inner__container">
+            <a href="#" class="devices__name">PC repair</a>
+            <a href="#" class="circle__box flex--end" aria-label="PC repair">›</a>
+          </div>
+
+          <div class="devices__inner__container">
+            <a href="#" class="devices__name">Monitor repair</a>
+            <a href="#" class="circle__box flex--end" aria-label="Monitor repair">›</a>
+          </div>
+        </div>
+
+        <div class="pagination" aria-hidden="true">
+          <span class="pagination__dot pagination__dot--active"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+        </div>
+
+        <label for="show-devices" class="readmore__box showall__box">
+          <span class="readmore__icon" aria-hidden="true">
+            <span>⌄</span>
+            <span>⌄</span>
+          </span>
+          <span class="toggle__show">Show all</span>
+          <span class="toggle__hide">Hide</span>
+        </label>
+      </section>
+
+      <!-- SERVICE PRICES -->
+      <section class="prices__section" id="prices">
+        <h2 class="section__title">Service prices</h2>
+
+        <div class="price__table__header">
+          <span>Repair services</span>
+          <span>Price</span>
+          <span>Deadline</span>
+          <span></span>
+        </div>
+
+        <div class="services__outer__box">
+          <div class="price__box">
+            <div>
+              <p class="light--text">Repair services</p>
+              <p>Diagnostics</p>
+            </div>
+            <div>
+              <p class="light--text">Price</p>
+              <p>Free of charge</p>
+            </div>
+            <div>
+              <p class="light--text">Term</p>
+              <p>30 min</p>
+            </div>
+            <a href="#" class="order__container">
+              <span>ORDER</span><span>›</span>
             </a>
           </div>
-        </section>
-      </main>
 
-      <!-- FOOTER -->
-      <footer class="footer light--text">
-        <div class="footer__copyright">
-          <p>© 2019 CPS</p>
-          <p>Developed by the Apesong team</p>
+          <div class="price__box">
+            <div>
+              <p class="light--text">Repair services</p>
+              <p>Display replacement</p>
+            </div>
+            <div>
+              <p class="light--text">Price</p>
+              <p>1,000 ₽</p>
+            </div>
+            <div>
+              <p class="light--text">Term</p>
+              <p>30–120 min</p>
+            </div>
+            <a href="#" class="order__container">
+              <span>ORDER</span><span>›</span>
+            </a>
+          </div>
+
+          <div class="price__box">
+            <div>
+              <p class="light--text">Repair services</p>
+              <p>Polyphonic speaker replacement</p>
+            </div>
+            <div>
+              <p class="light--text">Price</p>
+              <p>1,000 ₽</p>
+            </div>
+            <div>
+              <p class="light--text">Term</p>
+              <p>30–120 min</p>
+            </div>
+            <a href="#" class="order__container">
+              <span>ORDER</span><span>›</span>
+            </a>
+          </div>
+
+          <div class="price__box">
+            <div>
+              <p class="light--text">Repair services</p>
+              <p>Testing with a technical report</p>
+            </div>
+            <div>
+              <p class="light--text">Price</p>
+              <p>1,000 ₽</p>
+            </div>
+            <div>
+              <p class="light--text">Term</p>
+              <p>30–120 min</p>
+            </div>
+            <a href="#" class="order__container">
+              <span>ORDER</span><span>›</span>
+            </a>
+          </div>
+
+          <div class="price__box">
+            <div>
+              <p class="light--text">Repair services</p>
+              <p>Software replacement</p>
+            </div>
+            <div>
+              <p class="light--text">Price</p>
+              <p>1,000 ₽</p>
+            </div>
+            <div>
+              <p class="light--text">Term</p>
+              <p>30–120 min</p>
+            </div>
+            <a href="#" class="order__container">
+              <span>ORDER</span><span>›</span>
+            </a>
+          </div>
         </div>
 
-        <div>
-          <a href="#">Privacy policy</a>
+        <div class="pagination" aria-hidden="true">
+          <span class="pagination__dot pagination__dot--active"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
+          <span class="pagination__dot"></span>
         </div>
 
-        <div>
-          The information presented on this page is not a public offer
+        <!-- PROPOSAL -->
+        <div class="proposal__section">
+          <p>
+            All prices include VAT. The cost of repair is indicated for a
+            single service. To receive a commercial proposal for ongoing
+            maintenance, please submit a request.
+          </p>
+
+          <a href="#" class="proposal__link">
+            <span>Get a commercial proposal</span>
+            <span class="arrow--pink">›</span>
+          </a>
         </div>
-      </footer>
-    </div>
-  </body>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer light--text">
+      <div class="footer__copyright">
+        <p>© 2019 CPS</p>
+        <p>Developed by the Apesong team</p>
+      </div>
+
+      <div>
+        <a href="#">Privacy policy</a>
+      </div>
+
+      <div>
+        The information presented on this page is not a public offer
+      </div>
+    </footer>
+  </div>
+
+</body>
 </html>
