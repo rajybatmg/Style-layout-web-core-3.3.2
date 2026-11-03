@@ -45,8 +45,7 @@ input {
 /* MOBILE FIRST — 320px */
 
 .outer__container {
-  width: 320px;
-  height: 1722px;
+  width: 100%;
   min-height: 100vh;
   background-color: #f8f8f8;
 }
