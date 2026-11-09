@@ -166,12 +166,12 @@ img[alt="CPS Logo"] {
   min-width: 0;
 }
 
-.text__box {
+.intro {
   width: calc(100% - 32px);
   margin: 0 auto;
 }
 
-.text__box p {
+.intro p {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -185,62 +185,26 @@ img[alt="CPS Logo"] {
 
 /* READ MORE AND SHOW ALL */
 
-.toggle__input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-
-.readmore__box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 24px;
-  margin: 16px 0 16px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
+.myButton {
+  border: none;
+  background: transparent;
   cursor: pointer;
+  margin-left: 10px;
+  align-self: flex-start;
+  margin-top: 80px;
+  margin-bottom: 15px;
 }
-
-.readmore__icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  padding-bottom: 8px;
-  color: #41f6d7;
-  line-height: 9px;
+.myButton::before {
+  content: "⌄\A⌄";
+  white-space: pre;
+  display: inline-block;
+  line-height: 8px;
+  margin-right: 8px;
+  color: #41F6D7;
 }
-
-.toggle__hide {
-  display: none;
-}
-
-.toggle__input:focus-visible ~ .readmore__box {
-  outline: 2px solid #41f6d7;
-  outline-offset: 3px;
-}
-
-.toggle__input:checked ~ .readmore__box .toggle__show {
-  display: none;
-}
-
-.toggle__input:checked ~ .readmore__box .toggle__hide {
-  display: inline;
-}
-
-.toggle__input:checked ~ .readmore__box .readmore__icon {
-  transform: rotate(180deg);
-}
-
-#read-more:checked ~ .text__box .intro__extra {
+.intro__extra.visible {
   display: block;
 }
-
 /* IMAGE */
 
 .image img {
