@@ -1,4 +1,4 @@
-
+//For readmore and hide section 
 const button = document.querySelector('.myButton');
 const extraIntro = document.querySelector('.intro__extra');
 
@@ -8,8 +8,8 @@ button.addEventListener('click', () => {
     const isVisible = extraIntro.classList.contains('visible');
 
     if (isVisible) {
-        button.textContent = 'Show All';
+        button.textContent = 'Hide';
     } else {
-        button.textContent = 'Show Less';
+        button.textContent = 'Read More';
     }
 });
