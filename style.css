@@ -189,8 +189,9 @@ img[alt="CPS Logo"] {
   cursor: pointer;
   margin-left: 10px;
   align-self: flex-start;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 15px;
+  color: #1B1C21;
 }
 .myButton::before {
   content: "⌄\A⌄";
@@ -615,7 +616,7 @@ img[alt="CPS Logo"] {
 
 /* TABLET — 768px */
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
   /* HEADER */
 
@@ -639,39 +640,39 @@ img[alt="CPS Logo"] {
     flex-basis: auto;
   }
 
-  /* INTRODUCTION */
-
+  /* Introduction: Using grid*/
   .intro__container {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 45%;
+    column-gap: 24px;
     padding: 0 24px 32px;
+    align-items: start;
   }
 
-  .intro__text {
-    flex: 1 1 0;
+  .intro {
+    grid-column: 1;
+    grid-row: 1;
     min-width: 0;
   }
 
-  .text__box {
-    width: 100%;
-    margin: 0;
-  }
-
-  .intro__text .readmore__box {
-    margin-left: 0;
+  .intro__container .myButton {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    margin-top: 8px;
   }
 
   .intro__container .image {
-    flex: 0 0 45%;
+    grid-column: 2;
+    grid-row: 1 / 3;
     min-width: 0;
   }
 
   .intro__container .image img {
+    display: block;
     width: 100%;
     height: auto;
   }
-
   /* SECTION HEADINGS */
 
   .section__title {
@@ -742,6 +743,9 @@ img[alt="CPS Logo"] {
   .devices__section .showall__box {
     display: flex;
     margin: 16px 0 24px 24px;
+  }
+  .brands__showall {
+    display: block;
   }
 
   .brands__section .pagination,
