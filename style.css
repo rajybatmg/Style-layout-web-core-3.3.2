@@ -191,7 +191,7 @@ img[alt="CPS Logo"] {
   align-self: flex-start;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #1B1C21;
+  color: #1b1c21;
 }
 .myButton::before {
   content: "⌄\A⌄";
@@ -199,7 +199,7 @@ img[alt="CPS Logo"] {
   display: inline-block;
   line-height: 8px;
   margin-right: 8px;
-  color: #41F6D7;
+  color: #41f6d7;
 }
 .intro__extra.visible {
   display: block;
@@ -617,7 +617,6 @@ img[alt="CPS Logo"] {
 /* TABLET — 768px */
 
 @media only screen and (min-width: 768px) {
-
   /* HEADER */
 
   .navigation__container {
@@ -699,16 +698,16 @@ img[alt="CPS Logo"] {
     display: block;
     margin-left: 20px;
   }
-.brands__extra {
+  .brands__extra {
     display: none;
-}
-.brands__extra.visible {
+  }
+  .brands__extra.visible {
     display: flex;
-}
-.repair__brands__container
-> .brands__inner__container:nth-child(n + 7):not(.visible) {
+  }
+  .repair__brands__container
+    > .brands__inner__container:nth-child(n + 7):not(.visible) {
     display: none;
-}
+  }
   /* DEVICE CARDS */
 
   .devices__outer__container {
@@ -735,11 +734,11 @@ img[alt="CPS Logo"] {
   }
   .devices__extra {
     display: none;
-}
+  }
 
-.devices__extra.visible {
+  .devices__extra.visible {
     display: flex;
-}
+  }
 
   .brands__section .showall__box,
   .devices__section .showall__box {
@@ -793,7 +792,6 @@ img[alt="CPS Logo"] {
 /* FOR BIGGER SCREEN — 1120px */
 
 @media (min-width: 1120px) {
-
   /* SIDEBAR */
 
   .sidebar {
@@ -919,24 +917,21 @@ img[alt="CPS Logo"] {
     min-height: 200px;
     object-fit: cover;
   }
-
   /* BRAND CARDS */
 
   .repair__brands__container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-.repair__brands__container > .brands__extra.visible {
+  .repair__brands__container > .brands__extra.visible {
     display: flex;
-}
+  }
   .brands__inner__container {
     height: 72px;
     padding: 0 10px;
   }
 
-  .repair__brands__container
-    > .brands__inner__container:nth-child(7),
-  .repair__brands__container
-    > .brands__inner__container:nth-child(8) {
+  .repair__brands__container > .brands__inner__container:nth-child(7),
+  .repair__brands__container > .brands__inner__container:nth-child(8) {
     display: flex;
   }
 
@@ -952,7 +947,8 @@ img[alt="CPS Logo"] {
     margin-left: 4px;
   }
 
-  #show-brands:checked ~ .repair__brands__container
+  #show-brands:checked
+    ~ .repair__brands__container
     > .brands__extra:last-child {
     display: flex;
   }
@@ -964,22 +960,22 @@ img[alt="CPS Logo"] {
   }
 
   .devices__inner__container:nth-child(3),
-.devices__inner__container:nth-child(4) {
+  .devices__inner__container:nth-child(4) {
     display: flex;
-}
+  }
 
-.devices__outer__container > .devices__extra:not(.visible) {
+  .devices__outer__container > .devices__extra:not(.visible) {
     display: none;
-}
+  }
 
-.devices__outer__container > .devices__extra.visible {
+  .devices__outer__container > .devices__extra.visible {
     display: flex;
-}
-.devices__section .devices__showall {
+  }
+  .devices__section .devices__showall {
     display: block;
     margin-left: 20px;
     cursor: pointer;
-}
+  }
   /* SERVICE PRICES */
 
   .price__table__header {
