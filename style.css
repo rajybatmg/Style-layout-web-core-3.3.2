@@ -925,7 +925,9 @@ img[alt="CPS Logo"] {
   .repair__brands__container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
+.repair__brands__container > .brands__extra.visible {
+    display: flex;
+}
   .brands__inner__container {
     height: 72px;
     padding: 0 10px;
@@ -961,14 +963,23 @@ img[alt="CPS Logo"] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .devices__inner__container:nth-child(n + 3) {
+  .devices__inner__container:nth-child(3),
+.devices__inner__container:nth-child(4) {
     display: flex;
-  }
+}
 
-  .devices__section .showall__box {
+.devices__outer__container > .devices__extra:not(.visible) {
     display: none;
-  }
+}
 
+.devices__outer__container > .devices__extra.visible {
+    display: flex;
+}
+.devices__section .devices__showall {
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+}
   /* SERVICE PRICES */
 
   .price__table__header {
