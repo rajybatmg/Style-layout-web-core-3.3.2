@@ -54,3 +54,25 @@ devicesButton.addEventListener('click', () => {
         devicesButton.textContent = 'Show all';
     }
 });
+
+
+//SWIPER JS 
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+   slidesPerView: 'auto',
+    spaceBetween: 16,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+    loop: true,
+
+    speed: 9000, // Transition speed is constant
+
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false
+    }
+});
