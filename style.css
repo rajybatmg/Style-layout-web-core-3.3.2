@@ -616,10 +616,20 @@ img[alt="CPS Logo"] {
 
 
 
-/*SWIPER */
+/* SWIPER */
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .swiper-wrapper {
+    gap: 0;
+  }
+
+  .brands__inner__container {
+    width: 240px;
+  }
 }
 
 /* TABLET — 768px */
