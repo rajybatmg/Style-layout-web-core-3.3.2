@@ -237,25 +237,33 @@ img[alt="CPS Logo"] {
   background: linear-gradient(to right, #f8f8f8, #ffffff);
 }
 
-/* HORIZONTAL SCROLLING */
+/* SWIPER */
+
+.brands__slider,
+.devices__slider,
+.prices__slider {
+  width: 100%;
+  overflow: hidden;
+}
 
 .repair__brands__container,
 .devices__outer__container,
 .services__outer__box {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 16px;
-  width: 100%;
-  padding: 0 16px;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  scrollbar-width: none;
+  gap: 0;
+  padding: 0;
 }
 
-.repair__brands__container::-webkit-scrollbar,
-.devices__outer__container::-webkit-scrollbar,
-.services__outer__box::-webkit-scrollbar {
-  display: none;
+.brands__slider .swiper-slide {
+  width: 240px;
+}
+
+.devices__slider .swiper-slide {
+  width: 240px;
+}
+
+.prices__slider .swiper-slide {
+  width: 260px;
 }
 
 /* BRAND CARDS */

@@ -77,3 +77,69 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+// SWIPER - MOBILE ONLY
+const mobileScreen = window.matchMedia('(max-width: 767px)');
+
+let brandsSwiper = null;
+let devicesSwiper = null;
+let pricesSwiper = null;
+
+function updateSliders() {
+    if (mobileScreen.matches) {
+
+        if (!brandsSwiper) {
+            brandsSwiper = new Swiper('.brands__slider', {
+                direction: 'horizontal',
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                slidesOffsetBefore: 16,
+                slidesOffsetAfter: 16,
+                loop: false
+            });
+        }
+
+        if (!devicesSwiper) {
+            devicesSwiper = new Swiper('.devices__slider', {
+                direction: 'horizontal',
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                slidesOffsetBefore: 16,
+                slidesOffsetAfter: 16,
+                loop: false
+            });
+        }
+
+        if (!pricesSwiper) {
+            pricesSwiper = new Swiper('.prices__slider', {
+                direction: 'horizontal',
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                slidesOffsetBefore: 16,
+                slidesOffsetAfter: 16,
+                loop: false
+            });
+        }
+
+    } else {
+
+        if (brandsSwiper) {
+            brandsSwiper.destroy(true, true);
+            brandsSwiper = null;
+        }
+
+        if (devicesSwiper) {
+            devicesSwiper.destroy(true, true);
+            devicesSwiper = null;
+        }
+
+        if (pricesSwiper) {
+            pricesSwiper.destroy(true, true);
+            pricesSwiper = null;
+        }
+    }
+}
+
+updateSliders();
+
+mobileScreen.addEventListener('change', updateSliders);
