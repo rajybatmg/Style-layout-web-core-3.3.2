@@ -695,22 +695,20 @@ img[alt="CPS Logo"] {
     min-width: 0;
     flex: none;
   }
-
-  .repair__brands__container
-    > .brands__inner__container:nth-child(n + 7) {
-    display: none;
+  .brands__showall {
+    display: block;
+    margin-left: 20px;
   }
-
-  #show-brands:checked ~ .repair__brands__container
-    > .brands__inner__container {
+.brands__extra {
+    display: none;
+}
+.brands__extra.visible {
     display: flex;
-  }
-
-  #show-brands:checked ~ .repair__brands__container
-    > .brands__extra:last-child {
+}
+.repair__brands__container
+> .brands__inner__container:nth-child(n + 7):not(.visible) {
     display: none;
-  }
-
+}
   /* DEVICE CARDS */
 
   .devices__outer__container {
@@ -731,23 +729,23 @@ img[alt="CPS Logo"] {
   .devices__inner__container:nth-child(n + 3) {
     display: none;
   }
-
-  #show-devices:checked ~ .devices__outer__container
-    .devices__inner__container {
-    display: flex;
+  .devices__showall {
+    display: block;
+    margin-left: 20px;
   }
+  .devices__extra {
+    display: none;
+}
 
-  /* SHOW ALL */
+.devices__extra.visible {
+    display: flex;
+}
 
   .brands__section .showall__box,
   .devices__section .showall__box {
     display: flex;
     margin: 16px 0 24px 24px;
   }
-  .brands__showall {
-    display: block;
-  }
-
   .brands__section .pagination,
   .devices__section .pagination {
     display: none;
