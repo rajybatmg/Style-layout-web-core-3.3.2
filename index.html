@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CPS — Services and Support</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -165,41 +170,43 @@
           </div>
         </section>
 
+
         <!-- REPAIR BRANDS -->
         <section class="brands__section" id="brands">
           <h2 class="section__title">
             Repair of equipment from various brands
           </h2>
-
-          <div class="repair__brands__container">
-            <div class="brands__inner__container">
+           <div class="repair__brands__container"></div>
+        <!-- Slider main container -->
+       <div class="swiper">
+  <!-- Additional required wrapper -->
+     <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"> <div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/lenovo.png" alt="Lenovo" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Lenovo repair">›</a>
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+    <div class="swiper-slide"><div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/samsung.png" alt="Samsung" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Samsung repair">›</a>
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+    <div class="swiper-slide"><div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/apple.png" alt="Apple" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Apple repair">›</a>
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+             <div class="swiper-slide"> <div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/viewsonic.png" alt="ViewSonic" />
@@ -208,17 +215,16 @@
               <a href="#" class="circle__box" aria-label="ViewSonic repair"
                 >›</a
               >
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+    <div class="swiper-slide"><div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/bosch.png" alt="Bosch" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Bosch repair">›</a>
-            </div>
-
+            </div></div>
+    <div class="swiper-slide">
             <div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
@@ -226,18 +232,16 @@
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="HP repair">›</a>
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+             <div class="swiper-slide"><div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/acer.png" alt="Acer" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Acer repair">›</a>
-            </div>
-
-            <div class="brands__inner__container">
+            </div></div>
+    <div class="swiper-slide"><div class="brands__inner__container">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/sony.png" alt="Sony" />
@@ -245,25 +249,25 @@
               </div>
               <a href="#" class="circle__box" aria-label="Sony repair">›</a>
             </div>
-
-            <div class="brands__inner__container brands__extra">
+</div>
+    <div class="swiper-slide"> <div class="brands__inner__container brands__extra">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/lenovo.png" alt="Lenovo" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Lenovo repair">›</a>
-            </div>
-
-            <div class="brands__inner__container brands__extra">
+            </div></div> 
+    <div class="swiper-slide"> <div class="brands__inner__container brands__extra">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/samsung.png" alt="Samsung" />
                 </a>
               </div>
               <a href="#" class="circle__box" aria-label="Samsung repair">›</a>
-            </div>
+            </div></div>
 
+    <div class="swiper-slide">
             <div class="brands__inner__container brands__extra">
               <div class="brands__image">
                 <a href="#">
@@ -272,14 +276,26 @@
               </div>
               <a href="#" class="circle__box" aria-label="Apple repair">›</a>
             </div>
-
-            <div class="brands__inner__container brands__extra">
+</div>
+    <div class="swiper-slide"> <div class="brands__inner__container brands__extra">
               <div class="brands__image">
                 <a href="#">
                   <img src="./Brands_Logo/viewsonic.png" alt="ViewSonic" />
                 </a>
               </div>
-            </div>
+            </div></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+</div>
           </div>
           <div class="pagination" aria-hidden="true">
             <span class="pagination__dot pagination__dot--active"></span>
@@ -521,7 +537,7 @@
       </footer>
     </div>
     <!-- Outer container finished -->
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
