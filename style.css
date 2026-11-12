@@ -237,33 +237,25 @@ img[alt="CPS Logo"] {
   background: linear-gradient(to right, #f8f8f8, #ffffff);
 }
 
-/* SWIPER */
-
-.brands__slider,
-.devices__slider,
-.prices__slider {
-  width: 100%;
-  overflow: hidden;
-}
+/* HORIZONTAL SCROLLING */
 
 .repair__brands__container,
 .devices__outer__container,
 .services__outer__box {
   display: flex;
-  gap: 0;
-  padding: 0;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: 100%;
+  padding: 0 16px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
 }
 
-.brands__slider .swiper-slide {
-  width: 240px;
-}
-
-.devices__slider .swiper-slide {
-  width: 240px;
-}
-
-.prices__slider .swiper-slide {
-  width: 260px;
+.repair__brands__container::-webkit-scrollbar,
+.devices__outer__container::-webkit-scrollbar,
+.services__outer__box::-webkit-scrollbar {
+  display: none;
 }
 
 /* BRAND CARDS */
@@ -620,24 +612,6 @@ img[alt="CPS Logo"] {
 
 .sidebar__languages input:focus-visible + label {
   outline: 2px solid #ff3e79;
-}
-
-
-
-/* SWIPER */
-.swiper {
-  width: 100%;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .swiper-wrapper {
-    gap: 0;
-  }
-
-  .brands__inner__container {
-    width: 240px;
-  }
 }
 
 /* TABLET — 768px */
