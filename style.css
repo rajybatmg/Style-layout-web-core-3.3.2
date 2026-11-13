@@ -297,7 +297,7 @@ img[alt="CPS Logo"] {
 } */
  
 
-/* DEVICE CARDS AND SWIPER SECTION*/
+/* DEVICE CARDS */
 .devices__inner__container {
   display: flex;
   flex-direction: column;
@@ -316,7 +316,6 @@ img[alt="CPS Logo"] {
   line-height: 18px;
   text-decoration: none;
 }
-
 /* DEVICES SHOW ALL */
 .devices__showall {
   display: none;
@@ -330,36 +329,8 @@ img[alt="CPS Logo"] {
 
 /* SERVICE PRICES */
 
-
-/* SERVICE PRICES - MOBILE SCROLL */
-
-.services__outer__box {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 16px;
-    width: 100%;
-    padding: 0 16px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-}
-
-.services__outer__box::-webkit-scrollbar {
-    display: none;
-}
-
-.price__box {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    flex: 0 0 260px;
-    width: 260px;
-    height: 200px;
-    padding: 16px;
-    gap: 12px;
-    background-color: #ffffff;
-    border-radius: 6px;
-    scroll-snap-align: start;
+.price__table__header {
+  display: none;
 }
 
 .price__box {
@@ -712,9 +683,9 @@ img[alt="CPS Logo"] {
     flex: none;
   }
 
-  .devices__inner__container:nth-child(n + 3):not(.visible) {
+  .devices__inner__container:nth-child(n + 3) {
     display: none;
-}
+  }
   .devices__showall {
     display: block;
     margin-left: 20px;
@@ -1027,6 +998,11 @@ img[alt="CPS Logo"] {
     width: 100px;
     height: 32px;
   }
+
+  .prices__section > .pagination {
+    display: none;
+  }
+
   /* COMMERCIAL PROPOSAL */
 
   .proposal__section {
