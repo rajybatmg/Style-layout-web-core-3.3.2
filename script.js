@@ -58,21 +58,49 @@ devicesButton.addEventListener('click', () => {
 
 //SWIPER JS 
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-   slidesPerView: 'auto',
-    spaceBetween: 16,
-    slidesOffsetBefore: 16,
-    slidesOffsetAfter: 16,
-    loop: true,
+// SWIPER JS - MOBILE ONLY
 
-    speed: 9000, // Transition speed is constant
+const mobileScreen = window.matchMedia('(max-width: 767px)');
 
-    autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: false
+let swipers = [];
+
+function setupSwiper() {
+
+    if (mobileScreen.matches) {
+
+        // Initialize Swiper on mobile
+        document.querySelectorAll('.swiper').forEach((element) => {
+
+            if (!element.swiper) {
+                const swiper = new Swiper(element, {
+                    direction: 'horizontal',
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                    loop: true,
+                    speed: 9000,
+
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: false
+                    }
+                });
+
+                swipers.push(swiper);
+            }
+        });
+
+    } else {
+
+        // Destroy Swiper on tablet and desktop
+        swipers.forEach((swiper) => {
+            swiper.destroy(true, true);
+        });
+
+        swipers = [];
     }
-});
+}
+
+setupSwiper();
+
+mobileScreen.addEventListener('change', setupSwiper);
