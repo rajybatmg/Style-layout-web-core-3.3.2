@@ -365,8 +365,8 @@
          <button class="myButton devices__showall">Show all</button>
         </section>
 
-        <!-- SERVICE PRICES -->
-        <section class="prices__section" id="prices">
+        <!-- SERVICE PRICES WITH SWIPER-->
+        <section class="prices__section swiper" id="prices">
           <h2 class="section__title">Service prices</h2>
 
           <div class="price__table__header">
@@ -376,8 +376,8 @@
             <span></span>
           </div>
 
-          <div class="services__outer__box">
-            <div class="price__box">
+          <div class="services__outer__box swiper-wrapper">
+            <div class="price__box swiper-slide">
               <div>
                 <p class="light--text">Repair services</p>
                 <p>Diagnostics</p>
@@ -395,7 +395,7 @@
               </a>
             </div>
 
-            <div class="price__box">
+            <div class="price__box swiper-slide">
               <div>
                 <p class="light--text">Repair services</p>
                 <p>Display replacement</p>
@@ -413,7 +413,7 @@
               </a>
             </div>
 
-            <div class="price__box">
+            <div class="price__box swiper-slide">
               <div>
                 <p class="light--text">Repair services</p>
                 <p>Polyphonic speaker replacement</p>
@@ -431,7 +431,7 @@
               </a>
             </div>
 
-            <div class="price__box">
+            <div class="price__box swiper-slide">
               <div>
                 <p class="light--text">Repair services</p>
                 <p>Testing with a technical report</p>
@@ -440,6 +440,7 @@
                 <p class="light--text">Price</p>
                 <p>1,000 ₽</p>
               </div>
+
               <div>
                 <p class="light--text">Term</p>
                 <p>30–120 min</p>
@@ -449,15 +450,17 @@
               </a>
             </div>
 
-            <div class="price__box">
+            <div class="price__box swiper-slide">
               <div>
                 <p class="light--text">Repair services</p>
                 <p>Software replacement</p>
               </div>
-              <div>
+
+            <div>
                 <p class="light--text">Price</p>
                 <p>1,000 ₽</p>
               </div>
+
               <div>
                 <p class="light--text">Term</p>
                 <p>30–120 min</p>
@@ -466,16 +469,8 @@
                 <span>ORDER</span><span>›</span>
               </a>
             </div>
-          </div>
-
-          <div class="pagination" aria-hidden="true">
-            <span class="pagination__dot pagination__dot--active"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-            <span class="pagination__dot"></span>
-          </div>
-
+          </div> <!-- End of swiper-wrapper -->
+        
           <!-- PROPOSAL -->
           <div class="proposal__section">
             <p>
@@ -488,8 +483,8 @@
               <span>Get a commercial proposal</span>
               <span class="arrow--pink">›</span>
             </a>
-          </div>
-        </section>
+            </div>
+        </section> <!-- End of swiper box -->
       </main>
 
       <!-- FOOTER -->
