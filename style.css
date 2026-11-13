@@ -683,7 +683,7 @@ img[alt="CPS Logo"] {
     flex: none;
   }
 
-  .devices__inner__container:nth-child(n + 3) {
+  .devices__inner__container:nth-child(n + 5) { /*Only shows four devices*/
     display: none;
   }
   .devices__showall {
@@ -881,9 +881,13 @@ img[alt="CPS Logo"] {
   .repair__brands__container {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .repair__brands__container > .brands__extra.visible {
-    display: flex;
-  }
+  .repair__brands__container
+    > .brands__inner__container:nth-child(7):not(.visible),
+    .repair__brands__container
+    > .brands__inner__container:nth-child(8):not(.visible) {
+        display: flex;
+    }
+
   .brands__inner__container {
     height: 72px;
     padding: 0 10px;
