@@ -662,10 +662,6 @@ img[alt="CPS Logo"] {
   .brands__extra.visible {
     display: flex;
   }
-  .repair__brands__container
-    > .brands__inner__container:nth-child(n + 7):not(.visible) {
-    display: none;
-  }
   /* DEVICE CARDS */
 
   .devices__outer__container {
@@ -683,7 +679,7 @@ img[alt="CPS Logo"] {
     flex: none;
   }
 
-  .devices__inner__container:nth-child(n + 5) { /*Only shows four devices*/
+  .devices__inner__container:nth-child(n + 5) { 
     display: none;
   }
   .devices__showall {
@@ -703,11 +699,6 @@ img[alt="CPS Logo"] {
     display: flex;
     margin: 16px 0 24px 24px;
   }
-  .brands__section .pagination,
-  .devices__section .pagination {
-    display: none;
-  }
-
   /* SERVICE PRICES */
 
   .services__outer__box {
