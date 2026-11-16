@@ -6,7 +6,7 @@
 }
 
 /* FONTS */
-@font-face {
+/* @font-face {
   font-family: "TT Lakes Neue Trial";
   src: url("./Fonts/tt-lakes-neue-trial/TT Lakes Neue Trial Regular.ttf")
     format("truetype");
@@ -28,10 +28,10 @@
     format("truetype");
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 body {
-  font-family: "TT Lakes Neue Trial", sans-serif;
+  font-family: Roboto, sans-serif;
   color: #1b1c21;
 }
 
